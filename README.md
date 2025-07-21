@@ -24,3 +24,5 @@ Apache와 PHP 서버를 이용하여 애플리케이션을 실행합니다.
 Backend: PHP, MySQL
 Frontend: HTML, CSS, JavaScript
 DevOps: Apache Web Server
+
+api명세서.pptx엑서 api 기능을 확인할 수 있습니다.
