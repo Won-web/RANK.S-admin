@@ -25,4 +25,4 @@ Backend: PHP, MySQL
 Frontend: HTML, CSS, JavaScript
 DevOps: Apache Web Server
 
-api명세서.pptx엑서 api 기능을 확인할 수 있습니다.
+api명세서.pptx에서 api 기능을 확인할 수 있습니다.
