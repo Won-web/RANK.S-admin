@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.ui.editUserProfile.EditUserProfileActivity">
+
+        <include
+            android:id="@+id/layoutTool"
+            layout="@layout/layout_toolbar_back_charge" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutTool">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/str_lbl_name"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/nanumbarun_gothic" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tvEditName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/edittext_rect_fixed"
+                        android:focusable="false"
+                        android:fontFamily="@font/nanumbarun_gothic_light"
+                        android:hint="@string/str_hint_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/lbl_email"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/nanumbarun_gothic" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tvEditEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edittext_rect_fixed"
+                            android:focusable="false"
+                            android:fontFamily="@font/nanumbarun_gothic_light"
+                            android:hint="@string/str_hint_email"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/str_lbl_nickname"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/nanumbarun_gothic" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tvEditNickName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/edittext_rect"
+                        android:fontFamily="@font/nanumbarun_gothic_light"
+                        android:hint="@string/str_hint_enter_nickname"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/nanumbarun_gothic_light" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/str_lbl_phone_number"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/nanumbarun_gothic" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tvEditPhonNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/edittext_rect"
+                        android:fontFamily="@font/nanumbarun_gothic_light"
+                        android:hint="@string/str_hint_mobile_phone_number"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/nanumbarun_gothic_light" />
+
+                    <LinearLayout
+                        android:id="@+id/llpwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/str_lbl_password"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/nanumbarun_gothic" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tvEditCurrentPwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edittext_rect"
+                            android:fontFamily="@font/nanumbarun_gothic_light"
+                            android:hint="@string/str_hint_current_password"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textSize="12sp"
+                            app:fontFamily="@font/nanumbarun_gothic_light" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tvEditNewPwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edittext_rect"
+                            android:fontFamily="@font/nanumbarun_gothic_light"
+                            android:hint="@string/str_hint_new_password"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textSize="12sp"
+                            app:fontFamily="@font/nanumbarun_gothic_light" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tvEditRePwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edittext_rect"
+                            android:fontFamily="@font/nanumbarun_gothic_light"
+                            android:hint="@string/str_hint_please_enter_your_new_password"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textSize="12sp"
+                            app:fontFamily="@font/nanumbarun_gothic_light" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFBLoggedintxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/ic_facebook"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/fbtxt"
+                        android:gravity="center_vertical"
+                        android:text="@string/str_lbl_loggedin_fb"
+                        android:textColor="@color/fbtxt"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:fontFamily="@font/nanumbarun_gothic_light" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvGoogleLoggedintxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/ic_google"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/str_lbl_loggedin_google"
+                        android:textColor="@color/googletxt"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+
+                        app:fontFamily="@font/nanumbarun_gothic_light" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvKakaoLoggedintxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/ic_share_kakao"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/str_lbl_loggedin_kako"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:fontFamily="@font/nanumbarun_gothic_light" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLoggedintxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/ic_naver_edit"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:fontFamily="@font/nanumbarun_gothic_light" />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/edit"
+                    android:fontFamily="@font/nanumbarun_gothic_bold"
+                    android:text="@string/str_lbl_update"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+
+                    android:theme="@style/BtnTheme1" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/deleteAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnEdit"
+                    android:text="@string/str_delete_account"
+                    android:gravity="center_horizontal"
+                    android:textSize="16sp"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:fontFamily="@font/nanumbarun_gothic" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <include
+            android:id="@+id/extraViews"
+            layout="@layout/layout_extra_views"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutTool"
+            android:layout_alignParentBottom="true"
+            tools:visibility="gone" />
+
+
+    </RelativeLayout>
+</layout>

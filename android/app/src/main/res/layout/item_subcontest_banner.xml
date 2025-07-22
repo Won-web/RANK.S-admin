@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rlStatusName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/app_margin"
+                android:layout_marginEnd="@dimen/app_margin"
+                android:paddingTop="@dimen/app_padding_max"
+                android:paddingBottom="@dimen/app_padding_min"
+>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tvstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderstatus"
+                    tools:text="Voting Ends"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/nanumbarun_gothic" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/contestname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tvstatus"
+                    tools:text="2020 Miss Korea Contest"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:layout_alignBaseline="@id/tvstatus"
+                    android:layout_marginStart="@dimen/app_margin_min"
+                    app:fontFamily="@font/nanumbarun_gothic" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivsubcontest"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@id/rlStatusName"
+
+                 />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

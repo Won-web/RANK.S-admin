@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChargingStationNewFreeVC" customModule="RankingStar" customModuleProvider="target">
+            <connections>
+                <outlet property="cnsNavBarHeight" destination="Rao-KR-Cw5" id="syF-IV-Jqr"/>
+                <outlet property="mainView" destination="abQ-4P-oBd" id="efg-tD-OaU"/>
+                <outlet property="navBar" destination="6FY-Zu-ZKX" id="D94-W3-dxu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6FY-Zu-ZKX">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Rao-KR-Cw5"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Title" id="DeK-Bc-lAB"/>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-4P-oBd">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="abQ-4P-oBd" firstAttribute="top" secondItem="6FY-Zu-ZKX" secondAttribute="bottom" id="8r9-q0-VmK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="abQ-4P-oBd" secondAttribute="trailing" id="CsZ-RY-Mns"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="abQ-4P-oBd" secondAttribute="bottom" id="EQo-jm-R13"/>
+                <constraint firstItem="6FY-Zu-ZKX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PrR-ZJ-PB9"/>
+                <constraint firstItem="6FY-Zu-ZKX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ggI-d9-Mcf"/>
+                <constraint firstItem="abQ-4P-oBd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ymU-uv-BbV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6FY-Zu-ZKX" secondAttribute="trailing" id="zke-kZ-eTP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="110"/>
+        </view>
+    </objects>
+</document>

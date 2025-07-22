@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotificationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Push message title"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                app:fontFamily="@font/nanumbarun_gothic" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotificationTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                android:gravity="center_vertical"
+                tools:text="12.28 (Wed) 11:39 am"
+                android:textSize="14sp"
+                app:fontFamily="@font/nanumbarun_gothic" />
+<!--               android:drawableRight="@drawable/ic_go_to_arrow"
+                android:drawableTint="@color/grey"-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotificationContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                tools:text="Push message contents"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/nanumbarun_gothic" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

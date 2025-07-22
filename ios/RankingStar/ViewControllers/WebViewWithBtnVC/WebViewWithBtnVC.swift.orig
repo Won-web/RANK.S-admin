@@ -1,0 +1,115 @@
+//
+//  AboutUsVC.swift
+//  Jibudo
+//
+//  Created by kETAN on 13/06/18.
+//  Copyright © 2018 kETAN. All rights reserved.
+//
+
+import UIKit
+import Material
+import WebKit
+import SlideMenuControllerSwift
+
+
+
+class WebViewWithBtnVC: BaseVC {
+    
+    @IBOutlet var navBar: UINavigationBar!
+    @IBOutlet var objWKWebView: WKWebView!
+    var strWebURL:String! = "https://google.com"
+    var isFromAboutUs = false
+    var strNavBarTitle:String! = ""
+    var uiRefreshControl:UIRefreshControl = UIRefreshControl()
+    var webURL:URLRequest!
+    
+    @IBOutlet var btnContentList: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        objWKWebView.navigationDelegate = self
+        refreshControl.addTarget(self, action: #selector(refreshWebView(_:)), for: UIControl.Event.valueChanged)
+        objWKWebView.scrollView.addSubview(refreshControl)
+        objWKWebView.scrollView.bounces = true
+        
+        let url = URL(string: strWebURL)
+        webURL = URLRequest(url: url!)
+        
+        setNavigationAndUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        Util.statusBarColor(color: Constant.Color.NAVIGATION_BAR_BG_COLOR)
+        self.showProgress()
+        
+        objWKWebView.load(webURL)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Util.statusBarColor(color: UIColor.clear)
+        self.hideProgress()
+    }
+    
+    // MARK: - set Navigation UI
+    func setNavigationAndUI() {
+         navBar.setUI(navBarText: strNavBarTitle)
+        self.leftBarButton2(navBar : navBar , imgName1 : Constant.Image.back, imgName2 : Constant.Image.home)
+        self.rightBarSingleBtnWithImage2(navBar: navBar, imgName1: Constant.Image.menu, imgName2: Constant.Image.search)
+        btnContentList.setTitle(txtValue: "BTN_GO_CONTESTANT_LIST")
+        btnContentList.setBtnSignUpUI()
+    }
+    
+    @IBAction func btnContentListClicked(_ sender: UIButton) {
+        let objContestantListVC = ContestantListVC()
+        self.navigationController?.pushViewController(objContestantListVC, animated: true)
+//        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    //MARK: Button Tabbed
+    
+    @objc override func leftBarButtonClick() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    @objc override func leftBarButtonClick2() {
+    }
+    
+    @objc override func rightBtnClickedWithImg() {
+<<<<<<< HEAD
+        self.toggleRight()
+=======
+        //self.toggleRight()
+        Util.slideMenuController.toggleRight()
+>>>>>>> ec1010ee08ebe4ed5a62c31d8796386e0cfaf8c5
+    }
+    
+    @objc override func rightBtnClickedWithImg2() {
+    }
+
+    
+    @objc func refreshWebView(_ sender: UIRefreshControl) {
+       
+        objWKWebView.load(webURL)
+        sender.endRefreshing()
+    }
+    
+}
+
+extension WebViewWithBtnVC: WKNavigationDelegate {
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.hideProgress()
+    }
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        self.hideProgress()
+    }
+
+}
+
+
+extension WebViewWithBtnVC : SlideMenuControllerDelegate {
+    
+    func leftWillOpen() {
+        // print("SlideMenuControllerDelegate: leftWillOpen")
+    }
+}

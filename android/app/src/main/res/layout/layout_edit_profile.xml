@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0">
+
+        <include
+            android:id="@+id/tool"
+            layout="@layout/layout_toolbar_back_charge" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tool"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="50dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constranitIvProfileImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivProfileImg"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintDimensionRatio="1:1.05"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/constranitIvProfileImage"
+                        android:background="@color/white"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnchangeProfilepic"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/btn_round"
+                            android:gravity="center"
+                            android:text="@string/str_btn_change_profile_picture"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorAccent" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlintro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rlbtn"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@color/white">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtmsg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/str_lbl_meassage"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/nanumbarun_gothic_bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtmsg">
+
+                            <LinearLayout
+                                android:layout_width="0px"
+                                android:layout_height="0px"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/txtIntro"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/white"
+                                android:gravity="start"
+                                android:minLines="2"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                app:fontFamily="@font/nanumbarun_gothic"
+
+                                tools:text="@string/str_intro_dummy" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/btndelete"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/ic_close_msg" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/imgs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rlintro"
+                        android:background="@color/white">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/titleimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/str_lbl_images"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/nanumbarun_gothic_bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/ll1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/titleimg"
+                            android:layout_margin="20dp"
+
+
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/gvProfileImgs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:nestedScrollingEnabled="false"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                            <!--                        <LinearLayout-->
+                            <!--                            android:id="@+id/llAddPic"-->
+                            <!--                            android:layout_width="150dp"-->
+                            <!--                            android:layout_height="150dp"-->
+                            <!--                            android:layout_below="@id/gvProfileImgs"-->
+                            <!--                            android:gravity="center"-->
+                            <!--                            android:orientation="vertical">-->
+
+                            <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+                            <!--                                android:layout_width="50dp"-->
+                            <!--                                android:layout_height="50dp"-->
+                            <!--                                android:layout_centerInParent="true"-->
+                            <!--                                android:src="@drawable/ic_add_black_24dp" />-->
+
+                            <!--                            <androidx.appcompat.widget.AppCompatTextView-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:text="@string/str_lbl_add"-->
+                            <!--                                android:textColor="@color/colorAccent"-->
+                            <!--                                app:fontFamily="@font/nanumbarun_gothic" />-->
+                            <!--                        </LinearLayout>-->
+
+
+                            <!--                        <androidx.appcompat.widget.AppCompatImageView-->
+                            <!--                            android:layout_width="0dp"-->
+                            <!--                            android:layout_height="150dp"-->
+                            <!--                            android:layout_marginRight="10dp"-->
+                            <!--                            android:layout_weight="0.5"-->
+                            <!--                            android:background="@drawable/imgg" />-->
+
+                            <!--                        <LinearLayout-->
+                            <!--                            android:id="@+id/llAddPic"-->
+                            <!--                            android:layout_width="0dp"-->
+                            <!--                            android:layout_height="150dp"-->
+                            <!--                            android:layout_weight="0.5"-->
+                            <!--                            android:gravity="center"-->
+                            <!--                            android:orientation="vertical">-->
+
+                            <!--                            <androidx.appcompat.widget.AppCompatImageView-->
+                            <!--                                android:layout_width="50dp"-->
+                            <!--                                android:layout_height="50dp"-->
+                            <!--                                android:layout_centerInParent="true"-->
+                            <!--                                android:src="@drawable/ic_add_black_24dp" />-->
+
+                            <!--                            <androidx.appcompat.widget.AppCompatTextView-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:text="@string/str_lbl_add"-->
+                            <!--                                android:textColor="@color/colorAccent"-->
+                            <!--                                app:fontFamily="@font/nanumbarun_gothic" />-->
+                            <!--                        </LinearLayout>-->
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llYoutube"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgs"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/str_lbl_youtube_links"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/nanumbarun_gothic_bold" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                >
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etyt1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    style="@style/AppTheme.ytEditText"
+                                    android:layout_weight="1"
+                                    android:imeOptions="actionNext"
+                                    tools:text="www.youtube.com"
+
+
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatImageButton
+                                    android:id="@+id/btnClear1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/app_margin"
+                                    android:background="@drawable/close" />
+                            </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@color/divider_color"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etyt2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/AppTheme.ytEditText"
+                                android:layout_weight="1"
+                                android:imeOptions="actionNext"
+
+
+
+                                />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/btnClear2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_margin="@dimen/app_margin"
+                                android:background="@drawable/close" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@color/divider_color"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etyt3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/AppTheme.ytEditText"
+                                android:layout_weight="1"
+                                android:imeOptions="actionDone"
+                                tools:text="www.youtube.com"
+
+
+                                />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/btnClear3"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_margin="@dimen/app_margin"
+                                android:background="@drawable/close" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@color/divider_color"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_helper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/llYoutube"
+                        android:background="#f0f0f0"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="10dp"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/lbl_edit_profile_helper"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/nanumbarun_gothic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lbl_kakotalk"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:fontFamily="@font/nanumbarun_gothic" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/str_lbl_giunssen"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:fontFamily="@font/nanumbarun_gothic" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lbl_phone_number"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:fontFamily="@font/nanumbarun_gothic" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="010-0000-0000"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:fontFamily="@font/nanumbarun_gothic"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lbl_email"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:fontFamily="@font/nanumbarun_gothic" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="giunssen@gmail.com"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:fontFamily="@font/nanumbarun_gothic"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nanumbarun_gothic_bold"
+                android:text="@string/btn_strsubmit"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:theme="@style/BtnTheme1" />
+        </RelativeLayout>
+
+
+        <include
+            android:id="@+id/extraViews"
+            layout="@layout/layout_extra_views"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tool"
+            android:layout_alignParentBottom="true"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:visibility="gone" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

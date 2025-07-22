@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.exoplayer:extension-ima:2.10.1@aar">
+    <ANNOTATIONS>
+      <root url="jar:///mnt/f/Studio/.gradle/caches/transforms-2/files-2.1/ca890da445028466021623f276a0307c/extension-ima-2.10.1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar:///mnt/f/Studio/.gradle/caches/transforms-2/files-2.1/ca890da445028466021623f276a0307c/extension-ima-2.10.1/jars/classes.jar!/" />
+      <root url="file:///mnt/f/Studio/.gradle/caches/transforms-2/files-2.1/ca890da445028466021623f276a0307c/extension-ima-2.10.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar:///mnt/f/Studio/.gradle/caches/modules-2/files-2.1/com.google.android.exoplayer/extension-ima/2.10.1/bc98a6bd8dbe3739112945524a73ec5b531f8659/extension-ima-2.10.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar:///mnt/f/Studio/.gradle/caches/modules-2/files-2.1/com.google.android.exoplayer/extension-ima/2.10.1/4ef30e6c377234f12441523a4bafc114c7e00dd2/extension-ima-2.10.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

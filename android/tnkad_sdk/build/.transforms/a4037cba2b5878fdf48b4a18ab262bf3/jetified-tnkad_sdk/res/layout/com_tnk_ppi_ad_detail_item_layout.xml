@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+	<View
+		android:id="@+id/com_tnk_ad_detail_line"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/com_tnk_ad_detail_line_height"
+		android:layout_alignParentTop="true"
+		android:background="@color/com_tnk_ppi_ad_list_feed_line_color"
+		/>
+
+	<RelativeLayout
+	    android:id="@+id/com_tnk_ppi_ad_detail_action_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:layout_below="@id/com_tnk_ad_detail_line"
+	    android:padding="@dimen/com_tnk_common_15dp"
+	    >
+
+		<TextView
+			android:id="@+id/com_tnk_ad_detail_tag"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/com_tnk_ad_detail_tag_size"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			android:minWidth="@dimen/com_tnk_ad_detail_tag_size"
+			android:gravity="center"
+			android:textSize="@dimen/com_tnk_ad_detail_tag_text_size"
+			android:textStyle="bold"
+			android:padding="0dp"/>
+
+		<TextView
+		    android:id="@+id/com_tnk_ad_detail_action"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+			android:layout_toLeftOf="@id/com_tnk_ad_detail_tag"
+		    android:gravity="center_vertical"
+		    android:textColor="@color/com_tnk_ad_detail_action_text_color"
+		    android:textSize="@dimen/com_tnk_ad_detail_tag_text_size"
+			android:layout_marginRight="@dimen/com_tnk_common_5dp"
+		    />
+
+	</RelativeLayout>
+
+</RelativeLayout>	

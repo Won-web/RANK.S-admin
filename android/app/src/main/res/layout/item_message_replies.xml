@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/profile" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+            <!--//for ui purpose you have to concate commenter name ande message-->
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNameAndMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        app:fontFamily="@font/nanumbarun_gothic" />
+                    <!--            <androidx.appcompat.widget.AppCompatTextView-->
+                    <!--                android:id="@+id/tvCommentOfCommentor"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_marginLeft="10dp"-->
+                    <!--                android:layout_toRightOf="@id/tvNameOfCommentor"-->
+                    <!--                android:text="@string/str_intro_dummy"-->
+                    <!--                android:maxLines="2"-->
+                    <!--                android:ellipsize="end"-->
+                    <!--                app:fontFamily="@font/nanumbarun_gothic" />-->
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCommentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="2hrs ago"
+                    app:fontFamily="@font/nanumbarun_gothic" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tvCommentTime"
+                    tools:text="Reply"
+                    app:fontFamily="@font/nanumbarun_gothic" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--        <androidx.appcompat.widget.AppCompatTextView-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:layout_weight="0.2"-->
+        <!--            android:drawableTop="@drawable/ic_like"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="200" />-->
+    </LinearLayout>
+</layout>

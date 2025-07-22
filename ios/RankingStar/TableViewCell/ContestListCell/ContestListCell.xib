@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContestListCell" rowHeight="165" id="KGk-i7-Jjw" customClass="ContestListCell" customModule="RankingStar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="347" height="165"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzP-Zs-35O">
+                        <rect key="frame" x="0.0" y="0.0" width="347" height="165"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2t-oF-Ur6">
+                                <rect key="frame" x="15" y="15" width="90" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="GfX-ZF-8bc"/>
+                                    <constraint firstAttribute="width" constant="90" id="WOp-ca-Xy4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Voting ends"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKb-pE-LGr">
+                                <rect key="frame" x="115" y="15" width="42" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="S5E-yr-CYo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tVC-Df-v7R">
+                                <rect key="frame" x="0.0" y="50" width="347" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="pRF-nf-gif"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5b-rV-60X">
+                                <rect key="frame" x="0.0" y="50" width="347" height="125"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="3zu-5D-T2y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s2t-oF-Ur6" firstAttribute="leading" secondItem="kzP-Zs-35O" secondAttribute="leading" constant="15" id="8Zr-7f-bff"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cKb-pE-LGr" secondAttribute="trailing" constant="10" id="C7u-j6-fQc"/>
+                            <constraint firstAttribute="trailing" secondItem="tVC-Df-v7R" secondAttribute="trailing" id="ML2-ex-LeD"/>
+                            <constraint firstItem="f5b-rV-60X" firstAttribute="leading" secondItem="kzP-Zs-35O" secondAttribute="leading" id="PFi-Yw-3ie"/>
+                            <constraint firstItem="s2t-oF-Ur6" firstAttribute="top" secondItem="kzP-Zs-35O" secondAttribute="top" constant="15" id="Rag-iT-Myc"/>
+                            <constraint firstItem="tVC-Df-v7R" firstAttribute="leading" secondItem="kzP-Zs-35O" secondAttribute="leading" id="aRZ-y9-P5W"/>
+                            <constraint firstItem="cKb-pE-LGr" firstAttribute="leading" secondItem="s2t-oF-Ur6" secondAttribute="trailing" constant="10" id="k1X-bV-vNw"/>
+                            <constraint firstItem="f5b-rV-60X" firstAttribute="top" secondItem="s2t-oF-Ur6" secondAttribute="bottom" constant="10" id="mzR-rA-0P2"/>
+                            <constraint firstAttribute="trailing" secondItem="f5b-rV-60X" secondAttribute="trailing" id="oB2-eL-qb9"/>
+                            <constraint firstItem="cKb-pE-LGr" firstAttribute="top" secondItem="kzP-Zs-35O" secondAttribute="top" constant="15" id="rpt-cg-u6r"/>
+                            <constraint firstItem="tVC-Df-v7R" firstAttribute="top" secondItem="s2t-oF-Ur6" secondAttribute="bottom" constant="10" id="vQa-h0-eWZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="kzP-Zs-35O" secondAttribute="trailing" id="9uA-9W-FK1"/>
+                    <constraint firstItem="kzP-Zs-35O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QZv-2B-rcb"/>
+                    <constraint firstAttribute="bottom" secondItem="kzP-Zs-35O" secondAttribute="bottom" id="alk-hG-MxI"/>
+                    <constraint firstItem="kzP-Zs-35O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mCj-Kg-9oI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnVote" destination="s2t-oF-Ur6" id="DXj-o2-xII"/>
+                <outlet property="imgBackGround" destination="tVC-Df-v7R" id="cZg-cb-SRJ"/>
+                <outlet property="lblContestName" destination="cKb-pE-LGr" id="1r7-sU-Hlo"/>
+                <outlet property="viewContDetails" destination="H2p-sc-9uM" id="KU1-7R-tXl"/>
+                <outlet property="viewShade" destination="f5b-rV-60X" id="YSP-ua-beM"/>
+            </connections>
+            <point key="canvasLocation" x="40.799999999999997" y="102.09895052473765"/>
+        </tableViewCell>
+    </objects>
+</document>

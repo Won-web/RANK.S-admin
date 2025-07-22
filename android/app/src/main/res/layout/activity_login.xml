@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.ui.login.LoginActivity">
+
+        <include
+
+            android:id="@+id/layoutTool"
+            layout="@layout/layout_toolbar_back_charge" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutTool"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/logo_kr" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etLoginName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/edittext_round"
+                    android:drawableLeft="@drawable/ic_user"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/grey"
+                    android:fontFamily="@font/nanumbarun_gothic_light"
+                    android:hint="@string/str_hint_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/nanumbarun_gothic_light" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etLoginPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edittext_round"
+                    android:drawableLeft="@drawable/ic_pw"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/grey"
+                    android:fontFamily="@font/nanumbarun_gothic_light"
+                    android:hint="@string/str_hint_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/nanumbarun_gothic_light" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbautoLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/grey"
+                    android:fontFamily="@font/nanumbarun_gothic"
+                    android:text="@string/str_lbl_logging_automatically"
+                    android:textColor="@color/grey"
+                    android:visibility="gone"
+                    app:fontFamily="@font/nanumbarun_gothic" />
+             <androidx.appcompat.widget.AppCompatTextView
+                 android:id="@+id/tvForgotPwd"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/forgot_password"
+                 android:textColor="@color/black"
+                 android:gravity="center_horizontal"
+                 android:layout_marginTop="@dimen/app_margin"
+                 android:layout_gravity="end"
+                 android:layout_marginEnd="@dimen/app_margin"
+                 android:background="@drawable/line"
+                />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_filled_login"
+                    android:fontFamily="@font/nanumbarun_gothic_bold"
+                    android:text="@string/str_lbl_login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/nanumbarun_gothic_bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/str_or"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/nanumbarun_gothic" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLoginGoogle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_round">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/nanumbarun_gothic_bold"
+                        android:text="@string/str_lbl_google"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/nanumbarun_gothic_bold" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_google" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlLoginFb"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_filled_login"
+                    android:backgroundTint="#365AF5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/nanumbarun_gothic_bold"
+                        android:text="@string/str_lbl_facebook"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/nanumbarun_gothic_bold" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_facebook" />
+                </RelativeLayout>
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/login_button_fb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLoginKakao"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_filled_login"
+                    android:backgroundTint="#F9C403">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/str_lbl_kakao"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/nanumbarun_gothic_bold"
+                        android:src="@drawable/ic_kakao"
+                        app:fontFamily="@font/nanumbarun_gothic_bold" />
+                </RelativeLayout>
+
+                <com.kakao.usermgmt.LoginButton
+                    android:id="@+id/kakaoLoginBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLoginNaver"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/btn_filled_login"
+                    android:backgroundTint="#4EBE48"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/str_lbl_naver"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/nanumbarun_gothic_bold"
+                        android:src="@drawable/ic_naver"
+                        app:fontFamily="@font/nanumbarun_gothic_bold" />
+                </RelativeLayout>
+
+                <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
+                    android:id="@+id/buttonOAuthLoginImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+
+        <include
+            android:id="@+id/extraViews"
+            layout="@layout/layout_extra_views"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutTool"
+            tools:visibility="gone" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

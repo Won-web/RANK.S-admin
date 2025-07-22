@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.ui.contestantDetails.contestantVoteHistory.ContestantVoteHistory">
+
+        <include
+            android:id="@+id/tool"
+            layout="@layout/layout_toolbar_back_charge" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tool">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/rltitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/banner"
+                        android:background="#160c39">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLblRank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:text="@string/str_lbl_rank"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/nanumbarun_gothic" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/tvLblRank"
+                            android:layout_toStartOf="@id/tvLblVotes"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:text="@string/str_lbl_profile_nick_name"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/nanumbarun_gothic" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLblVotes"
+                            android:layout_width="100dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:text="@string/str_lbl_votes"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/nanumbarun_gothic" />
+
+
+                    </RelativeLayout>
+
+                    <com.etech.starranking.utils.FixedRecyclerView
+                        android:id="@+id/rvforVoteToContestant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rltitle"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_vote_history"/>
+
+                </RelativeLayout>
+
+                <include
+                    android:id="@+id/noDataFound"
+                    layout="@layout/layout_no_data_found"
+                    tools:visibility="gone" />
+            </FrameLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/extraViews"
+            layout="@layout/layout_extra_views"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tool"
+            android:layout_alignParentBottom="true"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

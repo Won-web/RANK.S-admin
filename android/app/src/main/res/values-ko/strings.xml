@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ranking Star</string>
+    <string name="str_btn_goToContestantList">투표하기</string>
+    <string name="str_btn_homepg">대회홈페이지</string>
+    <string name="str_btn_vote">투표하기</string>
+    <string name="str_lbl_age">나이</string>
+    <string name="str_lbl_height">신장</string>
+    <string name="str_lbl_weight">체중</string>
+    <string name="str_btn_share">공유하기</string>
+    <string name="str_lbl_charge">스타충전</string>
+    <string name="str_lbl_gift">선물하기</string>
+    <string name="str_lbl_history">득표내역</string>
+    <string name="str_lblhistory">득표내역</string>
+    <string name="str_btn_change_profile_picture">대표 사진 변경</string>
+    <string name="str_lbl_meassage">나의 한마디</string>
+    <string name="str_lbl_images">사진 및 동영상</string>
+    <string name="lbl_edit_profile_helper">기본 프로필 정보 변경이 필요한 경우 관리자에게 문의하세요.</string>
+    <string name="lbl_kakotalk">카카오톡 :</string>
+    <string name="lbl_phone_number">전화번호 :</string>
+    <string name="lbl_email">이메일</string>
+    <string name="btn_strsubmit">수정 완료</string>
+    <string name="str_lbl_my_stars">My스타</string>
+    <string name="str_lbl_100_stars">" 개  "</string>
+    <string name="str_lbl_enter_stars">선물 할 스타의 개수를 입력해 주세요.</string>
+    <string name="str_btn_useAll">모두 사용</string>
+    <string name="str_star_pop_warning">My스타는 선물 가능한 스타의 수량입니다.
+일일 투표가능 개수는 1000개입니다.</string>
+    <string name="btn_str_confirm">확인</string>
+    <string name="str_lbl_rank">순위</string>
+    <string name="str_lbl_profile_nick_name">프로필/닉네임</string>
+    <string name="str_lbl_votes">투표수</string>
+    <string name="str_lbl_share">공유하기</string>
+    <string name="str_hint_phone_number">받으실 분의 전화번호를 입력주세요.</string>
+    <string name="btn_str_enter_points_to_gift">"선물 할 스타의 개수를 입력해 주세요. "</string>
+    <string name="str_hint_email">아이디를 입력하세요.</string>
+    <string name="str_hint_password">비밀번호를 입력하세요.</string>
+    <string name="str_lbl_logging_automatically">자동으로 로그인하기</string>
+    <string name="str_lbl_login">로그인</string>
+    <string name="str_lbl_email_id">아이디</string>
+    <string name="btn_str_double_check">중복확인</string>
+    <string name="btn_str_gift">"선물하기"</string>
+    <string name="str_lbl_available_id">사용이 가능한 아이디입니다.</string>
+    <string name="str_lbl_password">비밀번호</string>
+    <string name="str_hint_re_password">비밀번호를 다시 입력해주세요.</string>
+    <string name="str_lbl_phoneNumber">휴대폰 번호</string>
+    <string name="str_lbl_nickname">닉네임</string>
+    <string name="str_hint_enter_nickname">닉네임를 입력해주세요.</string>
+    <string name="str_lbl_agreement">약관동의</string>
+    <string name="lbl_privacy_policy">개인정보 취급방침 동의</string>
+    <string name="terms_and_conditions">이용약관 동의</string>
+    <string name="subscribe_to_newsletter_subscription">뉴스레터 정기구독 동의</string>
+    <string name="btn_str_registration_completed">회원가입 완료</string>
+    <string name="str_lbl_view_details">상세 보기</string>
+    <string name="str_lbl_signin">회원가입</string>
+    <string name="star_charging_station">스타 충전소</string>
+    <string name="str_send_a_star">스타 선물하기</string>
+    <string name="str_history">스타이용내역</string>
+    <string name="str_ranking_star_user_guide">랭킹스타 이용안내</string>
+    <string name="str_notice">공지사항</string>
+    <string name="str_notification">알림함</string>
+    <string name="str_settings">앱 설정</string>
+    <string name="terms_of_use_and_privacy_policy">이용약관 및 개인정보취급방침</string>
+    <string name="btn_str_edit_profile">나의정보 수정</string>
+    <string name="str_lbl_logout">로그아웃</string>
+    <string name="str_lbl_name">이름</string>
+    <string name="str_hint_name">이름을 입력하세요.</string>
+    <string name="str_hint_current_password">현재 비밀번호를 입력해주세요.</string>
+    <string name="str_hint_new_password">새 비밀번호를 입력해주세요.</string>
+    <string name="str_lbl_loggedin_fb">페이스북 계정으로 로그인 했습니다.</string>
+    <string name="str_lbl_update">완료</string>
+    <string name="str_lbl_loggedin_google">구글 계정으로 로그인 했습니다.</string>
+    <string name="str_lbl_loggedin_naver">네이버 계정으로 로그인 했습니다.</string>
+    <string name="str_lbl_loggedin_kako">카카오톡 계정으로 로그인 했습니다.</string>
+    <string name="lbl_push_alarm">푸시알림</string>
+    <string name="lbl_vibration_alert">진동알림</string>
+    <string name="str_lbl_ver">버전정보</string>
+    <string name="lbl_sound_notification">소리알림</string>
+    <string name="btn_str_complete">완료</string>
+    <string name="str_lbl_earning_history">적립 내역</string>
+    <string name="str_lbl_useage_history">사용내역</string>
+    <string name="str_lbl_add">추가</string>
+    <string name="str_hint_must_be_same">비밀번호는 같아야합니다</string>
+    <string name="str_btn_edit_profile">프로필 수정</string>
+    <string name="str_lbl_no_data_found">프로필 수정</string>
+    <string name="str_lbl_no_data_found_search">검색결과가 없습니다. 다시 검색해 주세요.</string>
+    <string name="str_lbl_search_here">검색어를 입력하세요</string>
+    <string name="str_lbl_too_short">검색 입력이 너무 짧습니다</string>
+    <string name="str_msg_no_network_connection">인터넷 연결 상태를 확인하시기 바랍니다.</string>
+    <string name="str_btn_retry">터치하여 다시 시도하세요.</string>
+    <string name="str_lbl_attendance_check">출석체크</string>
+    <string name="str_lbl_attendance_check_completed">출석체크 완료</string>
+    <string name="str_lbl_earend">적립되었습니다</string>
+    <string name="str_lbl_completed_attendance_of_day">당일 출석체크를 완료하였습니다</string>
+    <string name="str_lbl_only_once_a_day">1일 1회만 가능</string>
+    <string name="str_lbl_dot">\u2022</string>
+    <string name="str_lbl1_inapp">청약철회,환불은 결제일로 부터 7일이내에 가능합니다.(단, 포인트를 사용했을 경우 환불불가)</string>
+    <string name="str_lbl2_inpp">환불은 구글플레이 고객센터를 통해서만 가능합니다</string>
+    <string name="str_lbl3_inpp">충전소 이용에 어려움이 있거나 불편한 경우 고객센터로 문의바랍니다.</string>
+    <string name="str_lbl_gift_popup">My스타는 선물 가능한 스타의 수량입니다.</string>
+    <string name="str_lbl_gift_star_warning">※ 랭킹스타 회원끼리만 선물하기가 가능합니다.</string>
+    <string name="str_gift_mob_no">받는사람 전화번호를 입력하세요.</string>
+    <string name="str_gift_stars">스타의 개수를 입력하세요.</string>
+    <string name="str_not_enough_star">보유한 스타가 부족합니다.</string>
+    <string name="str_popup_vote_star">투표 스타</string>
+    <string name="str_lbl_gift_surity"> 개를 선물하시겠습니까?</string>
+    <string name="str_lbl_gift_to"> 님에게</string>
+    <string name="str_msg_something_went_wrong">예상치 못한 오류가 발생했습니다.</string>
+    <string name="str_login_first">로그인이 필요합니다.</string>
+    <string name="str_hint_git_cant_cancel">선물한 스타는 취소 할 수 없습니다.</string>
+    <string name="lbl_title_settings">설정</string>
+    <string name="btn_cancel">취소</string>
+    <string name="msg_alert_you_have_permission">일부 권한을 거부했습니다. 설정으로 이동하여 활성화하십시오.</string>
+    <string name="str_take_pic">사진 촬영</string>
+    <string name="str_pick_gallary">갤러리에서 선택</string>
+    <string name="str_capture_video">동영상 촬영</string>
+    <string name="str_pick_video">갤러리에서 동영상 선택</string>
+    <string name="str_pick_images_gallary">갤러리에서 사진 선택</string>
+    <string name="str_max_images">최대 10 개의 이미지 허용</string>
+    <string name="str_max_video">최대 3 개의 동영상 허용</string>
+    <string name="msg_instagram_not_installed">Instagram이 설치되지 않았거나 설정이 완료되지 않았습니다</string>
+    <string name="str_hint_valid_phone_number">정확한 휴대폰번호를 입력해주세요.</string>
+    <string name="msg_this_feature_is_under_development">서비스 준비중입니다.</string>
+    <string name="str_hint_enter_valid_email">정확한 이메일 주소를 입력해 주세요.</string>
+    <string name="str_val_same_pass">새비밀번호와 비밀번호 확인이 일치 하지 않습니다.</string>
+    <string name="str_val_same_old_new_pass">새로운 비밀번호와 비밀번호 확인이 일치하지 않습니다.</string>
+    <string name="msg_update_success">프로필 업데이트 완료 !!</string>
+    <string name="str_no_data_found">데이터가 없습니다.</string>
+    <string name="msg_media_uploading">업로드 중입니다. 창을 닫지 마십시오</string>
+    <string name="str_ok">확인</string>
+    <string name="str_no_msg">소개 메시지가 없습니다.</string>
+    <string name="str_signup_view"><u>보기</u></string>
+    <string name="str_btn_vote_popup">투표</string>
+    <string name="str_star_sent_to">%s 참가자에게 스타 %s 개 투표 성공</string>
+    <string name="str_first">위</string>
+    <string name="str_second">위</string>
+    <string name="str_thrid">위</string>
+    <string name="str_post_fix_years">세</string>
+
+    <string name="str_cant_gift_urself">스타를 선물 할 수없습니다.</string>
+    <!--    25-03-2020-->
+    <string name="str_lbl_vote_popup_title">%s 참가자에게 투표하기</string>
+    <string name="str_lbl_logout_msg">로그 아웃 하시겠습니까?</string>
+    <string name="str_lbl_yes">예</string>
+    <string name="str_lbl_no">아니오</string>
+    <string name="str_hint_valid_password">비밀번호 길이는 8 이상이어야합니다</string>
+    <!--    26-03-2020-->
+    <string name="str_hint_your_email_address">이메일 주소를 입력해주세요.</string>
+    <string name="str_hint_mobile_phone_number">휴대폰 번호를 입력해주세요.</string>
+    <string name="str_hint_please_enter_your_new_password">새 비밀번호를 다시 입력해주세요.</string>
+    <string name="str_lbl_pleese_support"> 참가자를 응원해주세요.</string>
+    <string name="str_lbl_phone_number">전화번호</string>
+    <string name="str_lbl_history_postfix">\u0020개</string>
+    <!--    03-04-2020-->
+    <string name="str_msg_accept_term_condition">이용약관에 동의해주세요.</string>
+    <string name="str_msg_accept_privacy_policy">개인정보 취급방침에 동의해주세요.</string>
+    <string name="str_msg_please_povide_valid_user">핸드폰번호가 일치하는 회원 없습니다.</string>
+    <string name="str_msg_enter_proper_data">적절한 데이터를 입력하십시오</string>
+    <string name="str_msg_press_back_again">뒤로가기를 버튼을 한번 더 누르면 앱이 종료됩니다.</string>
+    <string name="str_msg_gift_success">%s 님에게 %s 개의 스타를 성공적으로 선물하였습니다.</string>
+    <!--    09-04-2020-->
+    <string name="str_val_email">이메일 주소를 입력해주세요</string>
+    <!--    10-04-2020-->
+    <string name="str_msg_voting_period">투표기간이 아닙니다.</string>
+    <!--    11-04-2020-->
+    <string name="str_menu_search">검색</string>
+    <string name="str_lbl_giunssen">Ericc</string>
+    <string name="str_lbl_oooops">앗!</string>
+    <string name="str_lbl_ranking_star">랭킹스타\u0020</string>
+    <!--    12-04-2020-->
+    <string name="str_msg_enter_star">투표할 스타 개수를 입력해주세요.</string>
+    <string name="str_msg_star_can_not_0">선물할 스타의 개수는 0 될 수 없습니다.</string>
+    <!--    15-04-2020-->
+    <string name="str_msg_please_wait_timer_is_running">타이머가 작동 중입니다</string>
+    <!--    21-04-2020-->
+    <string name="str_lbl_paid_charge_list_postfix">개</string>
+    <!--    22-04-2020-->
+    <string name="str_lbl_youtube_links">유튜브 링크</string>
+    <string name="str_hint_youtube_url">유튜브 링크를 입력해주세요</string>
+    <!--    <string name="str_val_youtube_link">유효한 YouTube 비디오 링크를 입력하십시오</string>-->
+    <string name="str_msg_invalid_youtube_link">잘못된 유튜브 링크입니다</string>
+    <string name="str_msg_star">스타</string>
+    <string name="str_lbl_cs">카카오톡문의하기</string>
+
+    <string name="str_lbl_forgot_password">비밀번호를 잊으셨습니까?</string>
+    <string name="str_lbl_verify">인증하기</string>
+    <string name="str_enter_otp">인증번호를 입력하세요</string>
+    <string name="str_lbl_send">보내기</string>
+    <string name="str_lbl_email_verification">이메일 인증</string>
+    <string name="str_lbl_enter_otp_sent">인증번호 전송</string>
+    <string name="str_lbl_resend_otp">인증번호 재전송</string>
+    <string name="str_lbl_create_new_pwd">비밀번호 설정</string>
+    <string name="str_change_pwd">비밀번호 변경</string>
+    <string name="str_val_forgot_pwd">비밀번호 변경이 완료되었습니다.</string>
+    <string name="forgot_password">비밀번호를 잊으셨습니까?</string>
+    <string name="str_hint_otp">인증번호를 입력하세요</string>
+    <string name="str_hint_valid_otp">정확한 인증번호를 입력하세요</string>
+
+
+    <string name="str_lbl_forgot">잊으셨습니까</string>
+    <string name="str_lbl_forgot_pwd">비밀번호를?</string>
+    <string name="str_delete_account"><u>회원탈퇴</u></string>
+    <string name="str_delete_account_title">회원을 탈퇴 하시겠습니까?</string>
+    <string name="str_delete_account_confirm">회원탈퇴 시 즉시 로그아웃 되며, 투표에 참여하실
+수 없습니다. 또한, 한달동안 같은 아이디로 가입이
+제한 됩니다.\n회원을 탈퇴하시더라도, 이미 투표하신 기록은
+유지됩니다.</string>
+    <string name="go_back">돌아가기</string>
+    <string name="btn_ok">탈퇴하기</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        tools:context=".ui.activity.ui.contestantDetails.PreviewImageSlider">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpSliderPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/preViewExit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/app_margin_min"
+            android:backgroundTint="@color/semi_transparent"
+            android:padding="10dp"
+            app:srcCompat="@drawable/close_btn_img" />
+
+
+    </RelativeLayout>
+</layout>

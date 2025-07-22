@@ -1,0 +1,570 @@
+//
+//  LoginVC.swift
+//  RankingStar
+//
+//  Created by Jinesh on 13/12/19.
+//  Copyright © 2019 Etech. All rights reserved.
+//
+
+import UIKit
+import Material
+import Photos
+import AssetsPickerViewController
+import ActionSheetPicker_3_0
+import AVKit
+import SlideMenuControllerSwift
+
+
+class EditprofileContestantSelfVC: BaseVC {
+    
+    
+    var objEditprofileContestantSelfModel : EditprofileContestantSelfViewModel!
+    @IBOutlet var navBar: UINavigationBar!
+    
+    @IBOutlet var lblCollectionText: UILabel!
+    @IBOutlet var objCollectionView: UICollectionView!
+    
+    @IBOutlet var imgUserImage: UIImageView!
+    
+    var searchedText : String = ""
+    @IBOutlet  var txtSearch: UITextField!
+    @IBOutlet var viewContSearch: UIView!
+    @IBOutlet var viewContSepretor: UIView!
+    @IBOutlet var viewContSepretor2: UIView!
+    @IBOutlet var btnSearchClose: UIButton!
+    
+    @IBOutlet var imgUserProfile: UIImageView!
+    @IBOutlet var btnEditUserProfile: UIButton!
+    @IBOutlet var btnSave: UIButton!
+    @IBOutlet var lblTitleUserInfo: UILabel!
+    @IBOutlet var txtVUserInfo: UITextView!
+    var isEditProfileBtnClicked = false
+    @IBOutlet var cnsCollectionViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet var viewProfileDetailBottom: UIView!
+    @IBOutlet var lblProfileTitle: UILabel!
+    @IBOutlet var lblProfileNameText: UILabel!
+    @IBOutlet var lblProfileNameValue: UILabel!
+    @IBOutlet var lblProfileMobText: UILabel!
+    @IBOutlet var lblProfileMobValue: UILabel!
+    @IBOutlet var lblProfileEmailText: UILabel!
+    @IBOutlet var lblProfileEmailValue: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = Constant.Color.NAVIGATION_BAR_BG_COLOR
+
+        objEditprofileContestantSelfModel = EditprofileContestantSelfViewModel(vc: self)
+        objCollectionView.register(UINib(nibName: Constant.CellIdentifier.EDIT_PROFILE_IMAGE_VIDEO_CELL, bundle: nil), forCellWithReuseIdentifier: Constant.CellIdentifier.EDIT_PROFILE_IMAGE_VIDEO_CELL)
+        objCollectionView.dataSource = self
+        objCollectionView.delegate = self
+        objCollectionView.isScrollEnabled = false
+        manageSizeOfCollectionViewCell()
+        setCollectionViewSize()
+        setUIColor()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        Util.statusBarColor(color: Constant.Color.NAVIGATION_BAR_BG_COLOR)
+    }
+
+    //MARK: custom method
+    func setUIColor()
+    {
+//        Util.statusBarColor(color: Constant.Color.NAVIGATION_BAR_BG_COLOR)
+        navBar.setUI(navBarText: "NAVIGATION_BAR_EDIT_PROFILE_SELF")
+        self.leftBarButton(navBar : navBar , imgName : Constant.Image.back)
+        self.rightBarSingleBtnWithImage(navBar: navBar, imgName: Constant.Image.menu)
+//        self.rightBarSingleBtnWithImage2(navBar: navBar, imgName1: Constant.Image.menu, imgName2: Constant.Image.search)
+        
+        txtSearch.setSearchUIWithPlaceholder(placeHolder: "TXT_PLACEHOLDER_SEARCH_TITLE")
+        btnSearchClose.setBackgroundImage(UIImage(named: Constant.Image.close), for: .normal)
+        viewContSearch.rectViewWithBorderColor()
+        txtSearch.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+        viewContSearch.isHidden = true
+        
+        viewContSepretor.backgroundColor = Constant.Color.VIEW_SEPRETOR_COLOR
+        viewContSepretor2.backgroundColor = Constant.Color.VIEW_SEPRETOR_COLOR
+        imgUserProfile.setImageFill(imageName: "contest3")
+//        Change your representative picture
+       // imgUserProfile.setImageFill(imageName: Constant.Image.user_profile)
+        btnEditUserProfile.setBtnEditProfileUI()
+        btnEditUserProfile.setTitle(txtValue: "BTN_EDIT_PROFILE_IMAGE")
+//        btnEditUserProfile.setBtnEditUserProfileUI()
+        lblTitleUserInfo.setLoginNormalUIStyleFullBack(value: "LBL_INTRODUCTION")
+        txtVUserInfo.setRectViewTxtNormalBlack(value: "")
+        btnSave.setTitle(txtValue: "BTN_EDIT_PROFILE_SAVE")
+        btnSave.setBtnSignUpUI()
+        
+        lblCollectionText.setCollectionTitleUIStyle(value: "LBL_PHOTOS_VIDEO")
+        
+        viewProfileDetailBottom.backgroundColor = Constant.Color.TXTF_BG_COLOR
+        lblProfileTitle.setEditProfileUIStyle(value: "Please contact your administrator if you need to change your profile information.")
+        lblProfileNameText.setEditProfileUIStyle1(value: "LBL_PROFILE_NAME")
+        lblProfileMobText.setEditProfileUIStyle1(value: "LBL_PROFILE_MOB")
+        lblProfileEmailText.setEditProfileUIStyle1(value: "LBL_PROFILE_EMAIL")
+        
+        lblProfileNameValue.setEditProfileUIStyle1(value: "giunssen")
+        lblProfileMobValue.setEditProfileUIStyle1(value: "010-0000-0000")
+        lblProfileEmailValue.setEditProfileUIStyle1(value: "giunssen@gmail.com")
+    }
+    
+    func getChargingHistoryAPI() {
+        if(Util.isNetworkReachable()) {
+            self.showProgress()
+            DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+                self.hideProgress()
+            }
+            let objChargingHistoryModel = ChargingHistoryModel()
+          //  objChargingStarHistoryModel.chargingHistoryAPI(objChargingHistoryModel : objChargingHistoryModel)
+        }else {
+            showAlert(msg: "NO_INTERNET_CONNECTION")
+//            refreshControl.endRefreshing()
+        }
+    }
+    
+    func setActionSheet(isEditPhoto:Bool = true)
+    {
+        let getPhotoActionSheet = UIAlertController(title: "GET_IMAGE_FROM_GALLERY".localizedLanguage(), message: "", preferredStyle: .actionSheet)
+        
+        let takePhotoAction = UIAlertAction(title: "TAKE_PHOTO".localizedLanguage(), style: .default){(ACTION) in
+            let image = UIImagePickerController()
+            image.delegate = self
+            image.sourceType = UIImagePickerController.SourceType.camera
+            image.allowsEditing = false
+            self.present(image, animated: true, completion: nil)
+        }
+        
+        let choosePhotoVieoAction = UIAlertAction(title: "CHOOSE_PHOTO_VIDEO".localizedLanguage(), style: .default)
+        {(ACTION) in
+            let picker = AssetsPickerViewController()
+            picker.pickerDelegate = self
+            picker.pickerConfig.assetsMaximumSelectionCount = 5
+            self.present(picker, animated: true, completion: nil)
+            
+//            let image = UIImagePickerController()
+//            image.delegate = self
+//            image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+//            image.allowsEditing = false
+//            self.present(image, animated: true, completion: nil)
+        }
+        
+        let choosePhotoAction = UIAlertAction(title: "CHOOSE_PHOTO_VIDEO".localizedLanguage(), style: .default)
+        {(ACTION) in
+//            let picker = AssetsPickerViewController()
+//            picker.pickerDelegate = self
+//            picker.pickerConfig.assetsMaximumSelectionCount = 5
+//            self.present(picker, animated: true, completion: nil)
+            
+            let image = UIImagePickerController()
+            image.delegate = self
+            image.sourceType = UIImagePickerController.SourceType.photoLibrary
+            image.allowsEditing = false
+            self.present(image, animated: true, completion: nil)
+        }
+        
+        
+        let cancelPhotoAction = UIAlertAction(title: "CANCEL".localizedLanguage(), style: .cancel, handler: nil)
+        
+        getPhotoActionSheet.addAction(takePhotoAction)
+        
+        if(isEditPhoto == true)
+        {
+            getPhotoActionSheet.addAction(choosePhotoAction)
+        }else
+        {
+            getPhotoActionSheet.addAction(choosePhotoVieoAction)
+        }
+        
+        
+        getPhotoActionSheet.addAction(cancelPhotoAction)
+        present(getPhotoActionSheet, animated: true, completion: nil)
+    }
+    
+    func getImageFromAsset(asset:PHAsset,imageSize:CGSize, callback:@escaping (_ result:UIImage) -> Void) -> Void{
+
+        let requestOptions = PHImageRequestOptions()
+        requestOptions.resizeMode = PHImageRequestOptionsResizeMode.fast
+        requestOptions.deliveryMode = PHImageRequestOptionsDeliveryMode.highQualityFormat
+        requestOptions.isNetworkAccessAllowed = true
+        requestOptions.isSynchronous = true
+        PHImageManager.default().requestImage(for: asset, targetSize: imageSize, contentMode: PHImageContentMode.default, options: requestOptions, resultHandler: { (currentImage, info) in
+            callback(currentImage!)
+        })
+    }
+    
+    func getUrlFromPHAsset(asset: PHAsset, callBack: @escaping (_ url: URL?) -> Void)
+    {
+        asset.requestContentEditingInput(with: PHContentEditingInputRequestOptions(), completionHandler: { (contentEditingInput, dictInfo) in
+
+            if let strURL = (contentEditingInput!.audiovisualAsset as? AVURLAsset)?.url.absoluteString
+            {
+                callBack(URL.init(string: strURL))
+            }
+        })
+    }
+    
+    func getUIImage(asset: PHAsset) -> UIImage {
+
+        var img: UIImage = UIImage()
+        let manager = PHImageManager.default()
+        let options = PHImageRequestOptions()
+        options.version = .original
+        options.isSynchronous = true
+        manager.requestImageData(for: asset, options: options) { data, _, _, _ in
+
+            if let data = data {
+                img = UIImage(data: data)!
+            }
+        }
+        return img
+    }
+    
+    func setCollectionViewSize() {
+        let size = ((UIScreen.main.bounds.width - 30) / 2) + 10
+        let arrCount = objEditprofileContestantSelfModel.getTableNumberOfSection()
+        
+        if objEditprofileContestantSelfModel.getTableNumberOfSection() == 0 {
+            cnsCollectionViewHeight.constant = size
+        }else if (objEditprofileContestantSelfModel.getTableNumberOfSection() % 2 == 0) {
+            cnsCollectionViewHeight.constant = (CGFloat(arrCount) / 2) * size + size
+        }else {
+            let imgCountInt = Int(arrCount / 2)
+            cnsCollectionViewHeight.constant = (CGFloat(imgCountInt) * size) + size
+        }
+    }
+    
+    //MARK:- Button clicked
+    
+    @IBAction func btnSearchClicked(_ sender: UIButton) {
+        viewContSearch.isHidden = true
+    }
+    @IBAction func btnEditClicked(_ sender: UIButton) {
+        isEditProfileBtnClicked = true
+        setActionSheet()
+        
+    }
+    
+    @IBAction func btnSaveClicked(_ sender: UIButton) {
+        
+    }
+    
+    //MARK:-  Tapped Methods clicked
+    @objc func imgVCloseTabbed(_ sender: CustomTabGestur){
+        objEditprofileContestantSelfModel.arrImageAndVideoList.remove(at: sender.intIndex)
+        setCollectionViewSize()
+        objCollectionView.reloadData()
+    }
+    
+    @objc func imgVPlayPlushTabbed(_ sender: CustomTabGestur){
+        if(objEditprofileContestantSelfModel.getTableNumberOfSection() <= sender.intIndex )
+        {
+           setActionSheet(isEditPhoto: false)
+        }else
+        {
+            print("play video")
+            let url = URL(string: objEditprofileContestantSelfModel.arrImageAndVideoList[sender.intIndex].objMyVideo.strUrl!)
+           // getUrlFromPHAsset(asset: objEditprofileContestantSelfModel.arrEditProfileGallery[sender.intIndex].objPHAsset!) { (url) in
+                if(url != nil)
+                {
+                    let player = AVPlayer(url: url!)
+                    let vc = AVPlayerViewController()
+                    vc.player = player
+
+                    self.present(vc, animated: true) {
+                        vc.player?.play()
+                    }
+                }else
+                {
+                    print("video not found")
+                }
+           // }
+        }
+    }
+    
+    
+   //MARK:- View model methods
+    func onLeadDashboardCompleted() {
+        
+    }
+    
+    func onApiSuccessHideProgress() {
+        self.hideProgress()
+    }
+    
+    func showMessage(message: String) {
+        self.showAlert(msg: message)
+    }
+    
+    @objc override func leftBarButtonClick() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc override func rightBtnClickedWithImg() {
+        self.toggleLeft()
+        
+    }
+    
+    @objc override func rightBtnClickedWithImg2() {
+        viewContSearch.isHidden = false
+    }
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        print(textField.text)
+    }
+}
+
+extension EditprofileContestantSelfVC : UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if(textField == txtSearch) {
+            self.searchedText = txtSearch.text!
+            
+            if searchedText.isEmpty {
+              //  objChargingStarHistoryModel.arrChargingHistoryModel = []
+             //   self.tblView.reloadData()
+                
+            }else {
+//                getChargingHistoryAPI()
+               // print(txtSearch.text)
+                // nothing
+            }
+        }
+    }
+    
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(textField == txtSearch) {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
+
+
+extension EditprofileContestantSelfVC:UICollectionViewDataSource,UICollectionViewDelegate
+{
+    // collection view
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return objEditprofileContestantSelfModel.getTableNumberOfSection() + 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell:EditProfileImageVideoCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.CellIdentifier.EDIT_PROFILE_IMAGE_VIDEO_CELL, for: indexPath) as! EditProfileImageVideoCell
+        
+        let lastIndex = objEditprofileContestantSelfModel.getTableNumberOfSection();
+        if(indexPath.row != lastIndex)
+        {
+            cell.imgVClose.isHidden = false
+            cell.lblAddImg.isHidden = true
+            cell.imgVUser.isHidden = false
+            cell.contentView.layer.borderWidth = 0
+            cell.imgVClose.setImageFit(imageName: Constant.Image.close_white)
+            cell.imgVClose.backgroundColor = Constant.Color.IMG_BG_VIEW_CLOSE
+            
+            let objImageAndVideoList = objEditprofileContestantSelfModel.arrImageAndVideoList[indexPath.row]
+            
+            if(objImageAndVideoList.isImage)
+            {
+                cell.imgVPlayPlush.isHidden = true
+                if(objImageAndVideoList.objMyImage.isUrl == true)
+                {
+                    cell.imgVUser.getImageFromURL(url: objImageAndVideoList.objMyImage.strUrl)
+                }else
+                {
+                    cell.imgVUser.image = objImageAndVideoList.objMyImage.uiImage
+                }
+                
+            }else
+            {
+                cell.imgVPlayPlush.isHidden = false
+                cell.imgVPlayPlush.setImageFit(imageName: Constant.Image.play)
+                if(objImageAndVideoList.objMyVideo.isFromServerUrl == true)
+                {
+                    cell.imgVUser.getImageFromURL(url: objImageAndVideoList.objMyVideo.strUrl)
+                }else
+                {
+                    
+                    let url = URL(string: objImageAndVideoList.objMyVideo.strUrl)!
+
+                    if let thumbnailImage = cell.imgVUser.getImageFromLocalPath(forUrl: url) {
+                        cell.imgVUser.image = thumbnailImage
+                    }
+                    
+                  //  cell.imgVUser.getImageFromLocalPath(path: URL(string: objImageAndVideoList.objMyVideo.strUrl)!)
+                }
+            }
+            
+//            if(objEditprofileContestantSelfModel.arrEditProfileGallery[indexPath.row].objPHAsset != nil)
+//            {
+//                let objPHAsset = objEditprofileContestantSelfModel.arrEditProfileGallery[indexPath.row].objPHAsset
+//                if(objPHAsset!.mediaType == PHAssetMediaType.image)
+//                {
+//                    cell.imgVPlayPlush.isHidden = true
+//                    cell.imgVUser.setImageFill(image : getUIImage(asset: objPHAsset!))
+//
+//                }else if(objPHAsset!.mediaType == PHAssetMediaType.video)
+//                {
+//                    cell.imgVPlayPlush.isHidden = false
+//                    cell.imgVPlayPlush.setImageFit(imageName: Constant.Image.play)
+//    //              cell.imgVUser.setImageFill(imageName: "contest3")
+//                    cell.imgVUser.setImageFill(image : getUIImage(asset: objPHAsset!))
+//                }
+//            }else if(objEditprofileContestantSelfModel.arrEditProfileGallery[indexPath.row].imgUIImage != nil)
+//            {
+//                cell.imgVPlayPlush.isHidden = true
+//                cell.imgVUser.setImageFill(image : objEditprofileContestantSelfModel.arrEditProfileGallery[indexPath.row].imgUIImage!)
+//            }else if(objEditprofileContestantSelfModel.arrEditProfileGallery[indexPath.row].strImgUrl != nil)
+//            {
+//                cell.imgVUser.getImageFromURL(url: objEditprofileContestantSelfModel.arrEditProfileGallery[indexPath.row].strImgUrl!)
+//            }
+            
+            
+            let imgVCloseTabbed:CustomTabGestur = CustomTabGestur(target: self, action: #selector(self.imgVCloseTabbed))
+            imgVCloseTabbed.intIndex = indexPath.row
+            cell.imgVClose.isUserInteractionEnabled = true
+            cell.imgVClose.addGestureRecognizer(imgVCloseTabbed)
+            
+        }else
+        {
+//            cell.img
+            cell.imgVClose.isHidden = true
+            
+            cell.imgVPlayPlush.isHidden = false
+            cell.imgVUser.isHidden = true
+            cell.imgVPlayPlush.setImageFit(imageName: Constant.Image.add_pink)
+            cell.lblAddImg.isHidden = false
+            cell.lblAddImg.setNormalUIStylePink(value: "LBL_ADD")
+            cell.contentView.layer.borderWidth = 2
+            cell.contentView.borderColor = Constant.Color.VIEW_BORDER_PINK_COLOR
+            
+            
+        }
+        
+        let imgVPlayPlushTabbed:CustomTabGestur = CustomTabGestur(target: self, action: #selector(self.imgVPlayPlushTabbed))
+        imgVPlayPlushTabbed.intIndex = indexPath.row
+        cell.imgVPlayPlush.isUserInteractionEnabled = true
+        cell.imgVPlayPlush.addGestureRecognizer(imgVPlayPlushTabbed)
+        
+        return   cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let lastIndex = objEditprofileContestantSelfModel.getTableNumberOfSection();
+        if(indexPath.row != lastIndex)
+        {
+            let objImageSlidingVC = ImageSlidingVC()
+            objImageSlidingVC.setCurrentPageIndex = indexPath.row
+            objImageSlidingVC.arrImageAndVideoList = objEditprofileContestantSelfModel.arrImageAndVideoList
+            self.navigationController?.pushViewController(objImageSlidingVC, animated: false)
+        }
+    }
+    
+    func manageSizeOfCollectionViewCell()
+    {
+        let uiCollectionViewFlowLayout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        
+        let size:CGFloat = UIScreen.main.bounds.width - 30
+//        let size:CGFloat = objCollectionView.frame.width - 28
+        uiCollectionViewFlowLayout.itemSize = CGSize(width: (size/2), height: (size/2))
+        objCollectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        uiCollectionViewFlowLayout.minimumInteritemSpacing = 10
+        uiCollectionViewFlowLayout.minimumLineSpacing = 10
+//        uiCollectionViewFlowLayout.scrollDirection = .vertical
+        objCollectionView.collectionViewLayout = uiCollectionViewFlowLayout
+        objCollectionView.setNeedsLayout()
+        objCollectionView.updateFocusIfNeeded()
+    }
+    // collection view end
+}
+
+extension EditprofileContestantSelfVC: AssetsPickerViewControllerDelegate {
+    
+    func assetsPickerCannotAccessPhotoLibrary(controller: AssetsPickerViewController) {}
+    func assetsPickerDidCancel(controller: AssetsPickerViewController) {}
+    func assetsPicker(controller: AssetsPickerViewController, selected assets: [PHAsset]) {
+        for assetTmp in assets
+        {
+            let objEditProfileGalleryModel = EditProfileGalleryModel()
+            objEditProfileGalleryModel.objPHAsset = assetTmp
+            
+            
+            let objImageAndVideoList = ImageAndVideoList()
+            
+            if(assetTmp.mediaType == PHAssetMediaType.image)
+            {
+                objImageAndVideoList.isImage = true
+                objImageAndVideoList.objMyImage.isUrl = false
+                objImageAndVideoList.objMyImage.uiImage = getUIImage(asset: assetTmp)
+            }else if(assetTmp.mediaType == PHAssetMediaType.video)
+            {
+                objImageAndVideoList.isImage = false
+                objImageAndVideoList.objMyVideo.isFromServerUrl = false
+                objImageAndVideoList.objMyVideo.strUrl = ""
+                getUrlFromPHAsset(asset: assetTmp, callBack: { (url) in
+                    
+                    objImageAndVideoList.objMyVideo.strUrl = url?.absoluteString
+                })
+            }
+            
+            
+            objEditprofileContestantSelfModel.arrImageAndVideoList.append(objImageAndVideoList)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.setCollectionViewSize()
+            self.objCollectionView.reloadData()
+        }
+    }
+    func assetsPicker(controller: AssetsPickerViewController, shouldSelect asset: PHAsset, at indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func assetsPicker(controller: AssetsPickerViewController, didSelect asset: PHAsset, at indexPath: IndexPath) {}
+    func assetsPicker(controller: AssetsPickerViewController, shouldDeselect asset: PHAsset, at indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func assetsPicker(controller: AssetsPickerViewController, didDeselect asset: PHAsset, at indexPath: IndexPath) {}
+}
+
+
+extension EditprofileContestantSelfVC:UIImagePickerControllerDelegate,UINavigationControllerDelegate
+{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage ?? UIImage()
+        if(isEditProfileBtnClicked == true)
+        {
+            isEditProfileBtnClicked = false
+            imgUserProfile.setImageFill(image: selectedImage)
+            
+        }else
+        {
+            let objImageAndVideoList = ImageAndVideoList()
+            objImageAndVideoList.isImage = true
+            objImageAndVideoList.objMyImage.isUrl = false
+            objImageAndVideoList.objMyImage.uiImage = selectedImage
+            
+            objEditprofileContestantSelfModel.arrImageAndVideoList.append(objImageAndVideoList)
+            setCollectionViewSize()
+            objCollectionView.reloadData()
+        }
+        //
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+}
+
+extension EditprofileContestantSelfVC : SlideMenuControllerDelegate {
+    
+    func leftWillOpen() {
+        // print("SlideMenuControllerDelegate: leftWillOpen")
+    }
+}

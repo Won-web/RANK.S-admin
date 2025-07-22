@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.etech.starranking.utils.CustomSwipeToRefresh
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<!--            <ScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlMainContestBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/vpBannerSlider"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSubContestBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rlMainContestBanner">
+
+                        <com.etech.starranking.utils.FixedRecyclerView
+                            android:id="@+id/rvSubContestList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+<!--            </ScrollView>-->
+
+            <include
+                android:id="@+id/noDataFound"
+                tools:visibility="gone"
+                layout="@layout/layout_no_data_found" />
+        </FrameLayout>
+    </com.etech.starranking.utils.CustomSwipeToRefresh>
+</layout>

@@ -1,0 +1,607 @@
+/*
+  Localizable.strings
+  RankingStar
+
+  Created by Jinesh on 13/12/19.
+  Copyright © 2019 Etech. All rights reserved.
+*/
+
+//General
+"IMG_SPLACE_SCREEN" = "rankingstar_splash_eng";
+"ALERT_YOU_HAVE_LOGIN_FIRST" = "You have to login first.";
+"PULL_TO_REFRESH" = "Pull to refresh";
+
+// facebook login sharing
+"Connection_with_facebook_not_success_fully" = "Connection with facebook failed!";
+"Click_on_Post_to_share_app" = "Click on Post to share app with facebook";
+"Post_not_share_successfully" = "Post not share successfully";
+"Post_share_successfully" = "Post shared successfully";
+"Facebook_not_open" = "Facebook not open";
+
+//Base Viewcontroller
+"APP_NAME" = "Ranking Star";
+"LBL_DOWNLOAD" = "Hey, Download RankingStar App.";
+"NETWORK_ERROR_MSG_TITLE" = "Whoops..!!!";
+"NETWORK_ERROR_MSG_DESC" = "No internet connection found. Check your connection or try again.";
+"BNT_RETRY" = "Tap to Retry";
+"LBL_CALL_PHONE_ERROR" = "something is wrong.";
+"BTN_RETRY" = "Retry";
+"LBL_NO_PRODUCTFOUND" = "No Data Found.";
+"SMS_DEFAULT_MESSAGE_TEXT" = "Hello from RankingStar app";
+"NO_INTERNET_CONNECTION"        = "Please check your internet connection";
+"INTERNAL_SERVER_ERROR"         = "Internal server error";
+"ALERT_INSTAGRAM_NOT_INSTALLD" = "Instagram is not installed";
+"ALERT_NO_INTERNET_SOMETHING_WRONG" = "Somthing went wrong!";
+"ALERT_YOUR_OFF_LINE" = "Looks like you're offline. Make sure you're connected to the internet and try again";
+
+
+// Custom Alert VC
+"ALERT_OK"                      = "OK";
+"ALERT_CANCEL"                  = "Cancel";
+"ALERT_YES"                     = "Yes";
+"ALERT_NO"                      = "No";
+"ALERT_GO_TO_SETTINGS"          = "Go To Setting";
+"ALERT_TYPE_COMMENT" = "Please type here...";
+
+//MainVC
+"LBL_AT_THE_RET" = "||";
+"LBL_VIEW_ALL_BANNER" = "View all";
+
+
+// LoginVC
+"RANKING_STAR" = "Ranking Star";
+"ALERT_BTN_OK" = "Ok";
+"ALERT_BTN_CANCEL" = "Cancel";
+
+"ALERT_ENTER_NAME" = "Please enter name";
+"ALERT_ENTER_EMAIL" = "Please enter email";
+"ALERT_ENTER_VALID_EMAIL" = "Please enter valid email";
+"ALERT_ENTER_PASSWORD" = "Please enter password";
+"ALERT_ENTER_NEW_PASSWORD" = "Please enter new password";
+"ALERT_ENTER_CURRENT_PASSWORD" = "Please enter current password";
+"ALERT_ENTER_CONF_PASSWORD" = "Please enter confirm password";
+"ALERT_PASSWORD_NOT_MATCH" = "Password not match";
+"ALERT_ENTER_PHONE_NUMBER" = "Please enter phone number";
+"ALERT_ENTER_VALID_PHONE_NUMBER" = "Please enter valid phone number. Like : 00000000000";
+"ALERT_ENTER_VALID_PHONE_NUMBER1" = "Please enter valid phone number";
+"ALERT_STAR_CAN_NOT_0" = "Presented stars cant be 0";
+//"ALERT_ENTER_VALID_PHONE_NUMBER" = "Please enter valid phone number. Like : 000-0000-0000";
+"ALERT_ENTER_NIK_NAME" = "Please enter nick name";
+"ALERT_CHECK_AGREEMENT" = "Please check agreements";
+"ALERT_ENTER_VOTE" = "Please enter star";
+
+"LBL_AUTO_LOGIN" = "Auto login";
+"LBL_OR" = "Or";
+"BTN_LOGIN" = "Login";
+"BTN_GOOGLE_LOGIN" = "Google";
+"BTN_FACEBOOK_LOGIN" = "Facebook";
+"BTN_KAKAO_LOGIN" = "Kakao";
+"BTN_NAVER_LOGIN" = "Naver";
+"NAVIGATION_BAR_LOGIN" = "Login";
+"BTN_LOGOUT" = "Logout";
+"BTN_LOGIN" = "Login";
+"BTN_SIGN_UP" = "Sign up";
+"BTN_EDIT_PROFILE" = "Edit profile";
+"ALERT_LOGIN_SUCCESS" = "Login Successfully";
+"ALERT_GOOGLE_LOGIN_ERROR" = "Anable to access your google data";
+
+"TXTF_ERROR_PASSWORD" = "Please enter passwrod";
+"ALERT_KAKAO_PERMISION_DENY" = "Connection with KakaoTalk failed!";
+"ALERT_NAVER_PERMISION_DENY" = "Connection with Naver failed!";
+
+// TEXTFIELD_PLACEHOLDER
+"TXT_PLACEHOLDER_EMAIL" = "Email";
+"TXT_PLACEHOLDER_PASSWORD" = "Password";
+
+//SignUpVC
+"NAVIGATION_BAR_SIGN_UP" = "Sign Up";
+"BTN_REGISTERED" = "Registration is complete";
+
+"TXT_PLACEHOLDER_NAME" = "Please enter name";
+"TXT_PLACEHOLDER_ENTER_EMAIL" = "Please enter email";
+"TXT_PLACEHOLDER_ENTER_CURRENT_PASSWORD" = "Please enter current password";
+"TXT_PLACEHOLDER_ENTER_PASSWORD" = "Please enter password";
+"TXT_PLACEHOLDER_ENTER_NEW_PASSWORD" = "Please enter new password";
+"TXT_PLACEHOLDER_CONF_PASSWORD" = "Please enter password again";
+"TXT_PLACEHOLDER_PHONE_NU" = "Please enter phone number";
+"TXT_PLACEHOLDER_NIK_NAME" = "Please enter nick name";
+
+"LBL_NAME" = "Name";
+"LBL_EMAIL" = "Email";
+"LBL_PASSWORD" = "Password";
+"LBL_CONF_PASSWORD" = "Confirm password";
+"LBL_PHONE_NU" = "Phone number";
+"LBL_NIK_NAME" = "Nick name";
+"ALERT_SIGN_UP_SUCCESS_FULLY" = "Sign up successfully";
+"LBL_AGREEMENT" = "Agreement";
+"LBL_PRIVACY_POLICY" = "Privacy Policy";
+"LBL_TERMS_CONDITION" = "Terms and Conditions";
+"LBL_NEWSLETTER" = "Subscribe to newsletter subscription";
+"LBL_NAME" = "Name";
+"LBL_AVAILABLE_ID" = "Available ID.";
+
+"BTN_EG" = "View";
+
+//EditUserProfileVC
+"NAVIGATION_BAR_EDIT_PROFILE" = "Edit profile";
+"BTN_SAVE" = "Save";
+"ALERT_SAVE_SUCCESS_FULLY" = "Data save successfully";
+"LBL_CURRENT_FACEBOOK_LOGIN" = "You are logged in with a Facebook account.";
+"LBL_CURRENT_GOOGLE_LOGIN" = "You are signed in with your Google Account.";
+"LBL_CURRENT_KAKAO_LOGIN" = "You are logged in with your Kakao account.";
+"LBL_CURRENT_NAVER_LOGIN" = "You are logged in with your Naver account.";
+
+//ChargingStarHistoryVC
+"NAVIGATION_BAR_STAR_HISTORY" = "Charging star history";
+"LBL_TOTAL_STAR_QUANTITY" = "Total quantity";
+"LBL_TOTAL_CHARGING_HISTORY" = "Earning history";
+"LBL_TOTAL_USING_HOSTORY" = "Using history";
+"TXT_PLACEHOLDER_SEARCH_TITLE" = "Please enter a search term";
+
+//web view
+"BTN_GO_CONTESTANT_LIST" = "Go contestant list";
+"NAV_ANNOUNCE_COMPETITION" = "Announce Competition";
+"NAV_VOTING_GUIDE" = "Voting Guide";
+
+//ContestantListVC
+"NAVIGATION_BAR_CONTESTANT_LIST" = "Contestant list";
+//"LBL_INFORMATION" = "Info >";
+//"LBL_SHARE" = "Share >";
+"LBL_INFORMATION" = "Voting Guide";
+"LBL_SHARE" = "Announce Competition";
+"LBL_CONTESTANT" = "Contestant";
+"BTN_CONTESTANT_LIST_VOTE" = "Vote";
+
+
+//SideMenu
+"BTN_BOTTOM" = "Terms of Use and Privacy Policy";
+"TAB_HOME" = "Home";
+"TAB_FREE_CHARGEING" = "Star charging station";
+"TAB_SEND_A_STAR" = "Send a star";
+"TAB_CHARGING_HISTORY" = "Star  history";
+"TAB_RANKING_STAR_GUIDE" = "Ranking Star User Guide";
+"TAB_NOTICE" = "Notice";
+"TAB_NOTIFICATION" = "Notification";
+"TAB_APP_SETTING" = "App settings";
+
+"TAB_STAR_SHOP" = "Star Shop";
+"TAB_PAID_CHARGING" = "Paid Charging";
+"TAB_NOTICE_BOARD" = "Notice";
+"TAB_PUSH_BOARD" = "Push Notification";
+
+"NAV_FREE_CHARGEING" = "Free Charging";
+"NAV_STAR_SHOP" = "Star Shop";
+"NAV_PAID_CHARGING" = "Paid Charging";
+"NAV_TITLE_STAR_CHARING_STATION" = "Star charging station";
+
+"LBL_MY_STAR" = "My star";
+"LBL_VOTE_PIECE" = "Piece";
+"ALERT_LOGOUT" = "Are you sure you want to logout?";
+
+
+//Voting history
+"LBL_VOTING_HISTORY" = "Voting history";
+"LBL_VOTE_HISTORY_RANKING" = "Ranking";
+"LBL_VOTE_HISTORY_PROFILE_NIK_NAME" = "Profile/nickname";
+"LBL_VOTE_HISTORY_VOTES" = "Votes";
+
+
+//VotePopupVC
+"LBL_VOTING_POPUP_VIEW" = "Vote";
+"LBL_VOTE_POPUP_TITLE_INFO" = "Send star to your favorit";
+"LBL_SEND_STAR" = "Confirm";
+"TXT_PLACEHOLDER_INPUT_STAR" = "Input stars";
+"BTN_USE_ALL" = "Use all";
+"LBL_USER_MAX_STARS" = "My Star is the number of stars that can vote. The daily number of votes is 1000.";
+"ALERT_NOT_HAVE_ENOUGN_STAR" = "You don't have enough star. Do you want purchase.";
+
+//SharePopupVC
+"LBL_SHARE_VIEW_TITLE" = "Share";
+
+
+//EditprofileContestantSelfVC
+"NAVIGATION_BAR_EDIT_PROFILE_SELF" = "Edit profile";
+"LBL_ADD" = "Add";
+"LBL_PROFILE_MY_WORD" = "My Word";
+"BTN_EDIT_PROFILE_SAVE" = "Save";
+"BTN_EDIT_PROFILE_IMAGE" = "Edit profile picture";
+
+"GET_IMAGE_FROM_GALLERY" = "Choose profile picture from camera or gallery";
+"TAKE_PHOTO" = "Photo shoot";
+"RECORED_VIDEO" = "Movie shooting";
+"CHOOSE_VIDEO" = "Choose movie";
+"CHOOSE_PHOTO_VIDEO" = "Select from library";
+"LBL_PROFILE_TEXT" = "Please contact your administrator if you need to change your profile information.";
+"LBL_PROFILE_NAME" = "KakaoTalk  :";
+"LBL_PROFILE_MOB" = "Phone Number  :";
+"LBL_PROFILE_EMAIL" = "Email  :";
+"LBL_PHOTOS_VIDEO" = "Photos and videos";
+"ALT_PROFILE_UPDATE_SUCCESS" = "Profile update successfully";
+
+//ContestantProfileVC
+"BTN_VOTE" = "Vote";
+"BTN_SHARE" = "Share";
+"BTN_DOUBLE_CHECK" = "Double check";
+"LBL_TABBAR_VOTE" = "Vote";
+"LBL_TABBAR_STAR_CHARGING" = "Star charging";
+"LBL_TABBAR_GIFT" = "Gift";
+"LBL_TABBAR_VOTING_RECORED" = "Voting record";
+"LBL_TABBAR_VOTE_LIST" = "Vote list";
+"BTN_EDIT_PROFILE" = "Edit profile";
+"LBL_VOTE" = "Vote";
+"ALERT_VIDEO_NOT_FOUND" = "Video not found";
+"TXT_PLACEHOLDER_TYPE_MESSAGE" = "Leave a message of support.";
+"BTN_CHEERING" = "Cheering";
+"LBL_REPLAY" = "Reply";
+"LBL_VIEW_ALL" = "---- View reply";
+"LBL_AGE" = "Age";
+"LBL_HEIGHT" = "Height";
+"LBL_WEIGHT" = "Weight";
+
+//SettingVC
+"LBL_PUSH_ALARM" = "Push Alarm";
+"LBL_SOUND_NOTIFICATION" = "Sound notification";
+"LBL_VIBRATION_ALERT" = "Vibration alert";
+"NAVIGATION_BAR_APP_SETTINGS" = "App settings";
+"BTN_COMPLETE" = "Complete";
+"LBL_APP_VERSION" = "Version Information";
+
+//PushNotificationVC
+"NAVIGATION_BAR_NOTIFICATION" = "Notification";
+
+
+//NoticeVC
+"NAVIGATION_BAR_NOTICE" = "Notice";
+
+// Term and condition
+"NAVIGATION_BAR_TEARM_CONDITION" = "View Details";
+
+
+//GiftVC
+"BTN_SEND" = "Send";
+
+//AttendanceCheckVC
+"LBL_TITLE_ATTRENDANCE_CHECK" = "Attendance Check";
+"LBL_ATTRENDANCE_CHECK_COMP" = "Attendance check completed";
+"LBL_STAR_HAS_BEEN_EARNED" = "Has been earned.";
+
+//AttendanceCheckConfirmVC
+"LBL_ATTRENDANCE_CHECK_COMP_ON_DAY" = "Completed attendance check on the day";
+"LBL_ATTENDANCE_ONLY_ONEY_ONCE_A_DAY" = "Only once a day";
+
+//WebViewWithTabVC
+"TOLL_STATION" = "Toll Station";
+"ATTENDANCE_CHECK" = "Attendence Check";
+"FREE_STATION" = "Free Station";
+"STAR_SHOP" = "Star Shop";
+"COUPAN_STATION" = "Coupan Station";
+"GIFT" = "Gift";
+
+"TOLL_STATION_DETAILS" = "Vote on any participant for a charged star!";
+"ATTENDANCE_CHECK_DETAILS" = "Check attendance every day to receive the star!";
+"FREE_STATION_DETAILS" = "Watch 10 videos and get 10 stars! (Up to 5 times a day)";
+"STAR_SHOP_DETAILS" = "Buy things and get a star!";
+"COUPAN_STATION_DETAILS" = "Vote for participants with a charged coupon!";
+"GIFT_DETAILS" = "On a special day, \nyou give it a star!";
+
+"LBL_CHARGING_STATION1" = "My Star paid from the free station will be paid immediately after watching.";
+"LBL_CHARGING_STATION2" = "My Star paid by attendance check will be paid when attendance check is completed.";
+"LBL_CHARGING_STATION3" = "MyStars paid may be delayed slightly depending on the provider's policy.";
+
+//WebViewChargingStationPaidVC
+"LBL_PAID_CHARGING_STATION1" = "When you make a purchase, you'll be charged to the credit card associated with your App Store account.";
+"LBL_PAID_CHARGING_STATION2" = "After you make a payment, you can change / cancel subscriptions in your App Store account settings.";
+"LBL_PAID_CHARGING_STATION3" = "If you would like to purchase a large amount of ‘Stars’, please contact our Customer Center. (Phone number).";
+
+//GiftVC2
+"LBL_GIFT_POPUP_VIEW" = "Gift";
+"TXT_PLACEHOLDER_INPUT_GIFT_PHONE" = "Recipient";
+"TXT_PLACEHOLDER_INPUT_GIFT_STAR" = "Gift star";
+"LBL_NUMBER_OF_STARS_PRESENT" = "My star is the number of stars that can be presented.";
+"LBL_PRESENTED_STAR_NOT_CANCEL" = "Presented stars cannot be canceled.";
+"LBL_WOULD_LIKE_TO_GIVE" = "Would you like to give this stars";
+"LBL_GIFT_TO" = "to";
+"ALERT_ENTER_STAR" = "Please enter star";
+ 
+<<<<<<< HEAD
+ 
+
+=======
+ /*
+
+//General
+"IMG_SPLACE_SCREEN" = "rankingstar_splash_kor";
+"ALERT_YOU_HAVE_LOGIN_FIRST" = "먼저 로그인해야합니다.";
+"PULL_TO_REFRESH" = "당겨 새로 고침";
+
+// facebook login sharing
+"Connection_with_facebook_not_success_fully" = "페이스 북과의 연결에 실패했습니다!";
+"Click_on_Post_to_share_app" = "페이스 북과 앱을 공유하려면 게시를 클릭하십시오";
+"Post_not_share_successfully" = "글이 공유되지 않았습니다"; //
+"Post_share_successfully" = "소식이 공유되었습니다."; //
+"Facebook_not_open" = "페이스 북이 열리지 않습니다";
+
+//Base Viewcontroller
+"APP_NAME" = "Ranking Star";
+"LBL_DOWNLOAD" = "Hey, Download RankingStar App.";
+"NETWORK_ERROR_MSG_TITLE" = "Whoops..!!!";
+"NETWORK_ERROR_MSG_DESC" = "인터넷 연결이 없습니다. 연결을 확인하거나 다시 시도하십시오.";
+"BNT_RETRY" = "터치하여 재시도";
+"LBL_CALL_PHONE_ERROR" = "뭔가 잘못되었다.";
+"BTN_RETRY" = "다시 해 보다";
+"LBL_NO_PRODUCTFOUND" = "데이터가 없습니다.";
+"SMS_DEFAULT_MESSAGE_TEXT" = "RankingStar 앱에서 안녕하세요";
+"NO_INTERNET_CONNECTION" = "인터넷 연결을 확인하십시오."; //
+"INTERNAL_SERVER_ERROR" = "인터넷 서버 오류";
+"ALERT_INSTAGRAM_NOT_INSTALLD" = "Instagram이 설치되지 않았습니다";
+"ALERT_NO_INTERNET_SOMETHING_WRONG" = "뭔가 잘못되었다!";
+"ALERT_YOUR_OFF_LINE" = "오프라인 인 것 같습니다. 인터넷에 연결되어 있는지 확인하고 다시 시도하십시오";
+
+
+// Custom Alert VC
+"ALERT_OK"                      = "확인";
+"ALERT_CANCEL"                  = "취소";
+"ALERT_YES"                     = "예";
+"ALERT_NO"                      = "아니";
+"ALERT_GO_TO_SETTINGS"          = "설정으로 이동";
+"ALERT_TYPE_COMMENT" = "Please type here...";
+
+//MainVC
+"LBL_AT_THE_RET" = "||";
+"LBL_VIEW_ALL_BANNER" = "View all";
+
+
+// LoginVC
+"RANKING_STAR" = "Ranking Star";
+"ALERT_BTN_OK" = "확인";
+"ALERT_BTN_CANCEL" = "취소";
+
+"ALERT_ENTER_NAME" = "이름을 입력하십시오."; //
+"ALERT_ENTER_EMAIL" = "이메일 주소를 입력 해주세요."; //
+"ALERT_ENTER_VALID_EMAIL" = "유효한 이메일 주소를 입력하십시오."; //
+"ALERT_ENTER_PASSWORD" = "비밀번호를 입력해주세요."; //
+"ALERT_ENTER_CURRENT_PASSWORD" = "현재 비밀번호를 입력하십시오"; //
+"ALERT_ENTER_CONF_PASSWORD" = "비밀번호를 다시 입력해주세요."; //
+"ALERT_PASSWORD_NOT_MATCH" = "비밀번호가 일치하지 않습니다";
+"ALERT_ENTER_PHONE_NUMBER" = "휴대폰 번호를 입력해주세요."; //
+"ALERT_ENTER_VALID_PHONE_NUMBER" = "유효한 휴대 전화 번호를 입력하십시오. 처럼 : 00000000000";
+"ALERT_ENTER_VALID_PHONE_NUMBER1" = "유효한 휴대 전화 번호를 입력하십시오";
+"ALERT_STAR_CAN_NOT_0" = "발표 된 별은 0이 될 수 없습니다";
+//"ALERT_ENTER_VALID_PHONE_NUMBER" = "Please enter valid phone number. Like : 000-0000-0000";
+"ALERT_ENTER_NIK_NAME" = "닉네임을 입력하십시오.";
+"ALERT_CHECK_AGREEMENT" = "계약을 확인하십시오.";
+"ALERT_ENTER_VOTE" = "별표를 입력하십시오";
+
+"LBL_AUTO_LOGIN" = "자동으로 로그인하기"; //
+"LBL_OR" = "Or"; //
+"BTN_LOGIN" = "로그인"; //
+"BTN_GOOGLE_LOGIN" = "Google"; //
+"BTN_FACEBOOK_LOGIN" = "Facebook"; //
+"BTN_KAKAO_LOGIN" = "Kakao"; //
+"BTN_NAVER_LOGIN" = "Naver"; //
+"NAVIGATION_BAR_LOGIN" = "Login"; //
+"BTN_LOGOUT" = "로그아웃"; //
+"BTN_LOGIN" = "로그인"; //
+"BTN_SIGN_UP" = "회원가입";
+"BTN_EDIT_PROFILE" = "나의정보 수정"; //
+"ALERT_LOGIN_SUCCESS" = "성공적으로 로그인";
+"ALERT_GOOGLE_LOGIN_ERROR" = "Google 데이터에 액세스 가능"; //
+
+"TXTF_ERROR_PASSWORD" = "Please enter passwrod";
+"ALERT_KAKAO_PERMISION_DENY" = "카카오 톡과의 연결에 실패했습니다!";
+"ALERT_NAVER_PERMISION_DENY" = "네이버와의 연결에 실패했습니다!";
+
+// TEXTFIELD_PLACEHOLDER
+"TXT_PLACEHOLDER_EMAIL" = "아이디를 입력하세요."; //
+"TXT_PLACEHOLDER_PASSWORD" = "비밀번호를 입력하세요."; //
+
+//SignUpVC
+"NAVIGATION_BAR_SIGN_UP" = "Sign Up";
+"BTN_REGISTERED" = "회원가입 완료"; //
+
+"TXT_PLACEHOLDER_NAME" = "홍길동";
+"TXT_PLACEHOLDER_ENTER_EMAIL" = "이메일 주소를 입력해주세요."; //
+"TXT_PLACEHOLDER_ENTER_CURRENT_PASSWORD" = "현재 비밀번호를 입력해주세요.";
+"TXT_PLACEHOLDER_ENTER_PASSWORD" = "비밀번호를 입력해주세요."; //
+"TXT_PLACEHOLDER_ENTER_NEW_PASSWORD" = "새 비밀번호를 입력해주세요.";
+"TXT_PLACEHOLDER_CONF_PASSWORD" = "새 비밀번호를 다시 입력해주세요."; //
+"TXT_PLACEHOLDER_PHONE_NU" = "휴대폰 번호를 입력해주세요."; //
+"TXT_PLACEHOLDER_NIK_NAME" = "닉네임을 입력하십시오."; //
+
+"LBL_NAME" = "이름";
+"LBL_EMAIL" = "아이디"; //
+"LBL_PASSWORD" = "비밀번호"; //
+"LBL_CONF_PASSWORD" = "Confirm password";
+"LBL_PHONE_NU" = "휴대폰 번호"; //
+"LBL_NIK_NAME" = "닉네임"; //
+"ALERT_SIGN_UP_SUCCESS_FULLY" = "Sign up successfully";
+"LBL_AGREEMENT" = "약관동의"; //
+"LBL_PRIVACY_POLICY" = "개인정보 취급방침 동의"; //
+"LBL_TERMS_CONDITION" = "이용약관 동의"; //
+"LBL_NEWSLETTER" = "뉴스레터 정기구독 동의"; //
+"LBL_NAME" = "이름"; //
+"LBL_AVAILABLE_ID" = "사용이 가능한 아이디입니다."; //
+
+"BTN_EG" = "보기";
+
+//EditUserProfileVC
+"NAVIGATION_BAR_EDIT_PROFILE" = "Edit profile";
+"BTN_SAVE" = "완료"; //
+"ALERT_SAVE_SUCCESS_FULLY" = "데이터 저장 성공";
+"LBL_CURRENT_FACEBOOK_LOGIN" = "Facebook 계정으로 로그인 했습니다."; //
+"LBL_CURRENT_GOOGLE_LOGIN" = "Google 계정으로 로그인 했습니다."; //
+"LBL_CURRENT_KAKAO_LOGIN" = "Kakao 계정으로 로그인 했습니다.";
+"LBL_CURRENT_NAVER_LOGIN" = "Never 계정으로 로그인 했습니다.";
+
+//ChargingStarHistoryVC
+"NAVIGATION_BAR_STAR_HISTORY" = "Charging star history";
+"LBL_TOTAL_STAR_QUANTITY" = "My스타"; //
+"LBL_TOTAL_CHARGING_HISTORY" = "적립 내역";
+"LBL_TOTAL_USING_HOSTORY" = "사용내역";
+"TXT_PLACEHOLDER_SEARCH_TITLE" = "검색어를 입력하십시오";
+
+//web view
+"BTN_GO_CONTESTANT_LIST" = "투표하기"; //
+"NAV_ANNOUNCE_COMPETITION" = "Announce Competition";
+"NAV_VOTING_GUIDE" = "Voting Guide";
+
+//ContestantListVC
+"NAVIGATION_BAR_CONTESTANT_LIST" = "Contestant list";
+//"LBL_INFORMATION" = "Info >";
+//"LBL_SHARE" = "Share >";
+"LBL_INFORMATION" = "Voting Guide";
+"LBL_SHARE" = "Announce Competition";
+"LBL_CONTESTANT" = "Contestant";
+"BTN_CONTESTANT_LIST_VOTE" = "투표하기";
+
+
+//SideMenu
+"BTN_BOTTOM" = "이용약관 및 개인정보취급방침";
+"TAB_HOME" = "집";
+"TAB_FREE_CHARGEING" = "스타 충전소";
+"TAB_SEND_A_STAR" = "스타 선물하기";
+"TAB_CHARGING_HISTORY" = "스타이용내역";
+"TAB_RANKING_STAR_GUIDE" = "랭킹스타 이용안내";
+"TAB_NOTICE" = "공지사항";
+"TAB_NOTIFICATION" = "알림함";
+"TAB_APP_SETTING" = "앱 설정";
+
+"TAB_STAR_SHOP" = "Star Shop";
+"TAB_PAID_CHARGING" = "Paid Charging";
+"TAB_NOTICE_BOARD" = "Notice";
+"TAB_PUSH_BOARD" = "Push Notification";
+
+"NAV_FREE_CHARGEING" = "무료충전";
+"NAV_STAR_SHOP" = "스타샵";
+"NAV_PAID_CHARGING" = "유료충전";
+"NAV_TITLE_STAR_CHARING_STATION" = "Star charging station";
+
+"LBL_MY_STAR" = "My스타";
+"LBL_VOTE_PIECE" = "개";
+"ALERT_LOGOUT" = "로그 아웃 하시겠습니까?";
+
+
+
+"LBL_VOTE_HISTORY_PROFILE_NIK_NAME" = "프로필 / 닉네임";
+"LBL_VOTE_HISTORY_VOTES" = "투표수";
+
+//Voting history
+"LBL_VOTING_HISTORY" = "Voting history";
+"LBL_VOTE_HISTORY_RANKING" = "순위";
+//VotePopupVC
+"LBL_VOTING_POPUP_VIEW" = "투표하기"; //
+"LBL_VOTE_POPUP_TITLE_INFO" = "Send star to your favorit";
+"LBL_SEND_STAR" = "확인";
+"TXT_PLACEHOLDER_INPUT_STAR" = "투표 스타"; //
+"BTN_USE_ALL" = "모두 사용";
+"LBL_USER_MAX_STARS" = "My스타는 투표가능한 스타갯수입니다. 일일 투표가능 개수는 1000개입니다.";
+"ALERT_NOT_HAVE_ENOUGN_STAR" = "별이 충분하지 않습니다. 구매 하시겠습니까?";
+
+//SharePopupVC
+"LBL_SHARE_VIEW_TITLE" = "공유하기"; //
+
+
+//EditprofileContestantSelfVC
+"NAVIGATION_BAR_EDIT_PROFILE_SELF" = "Edit profile";
+"LBL_ADD" = "Add";
+"LBL_PROFILE_MY_WORD" = "나의 한마디"; //
+"BTN_EDIT_PROFILE_SAVE" = "수정 완료"; //
+"BTN_EDIT_PROFILE_IMAGE" = "대표 사진 변경"; //
+
+"GET_IMAGE_FROM_GALLERY" = "카메라 또는 갤러리에서 프로필 사진 선택"; //
+"TAKE_PHOTO" = "사진 촬영";
+"RECORED_VIDEO" = "동영상 촬영";
+"CHOOSE_VIDEO" = "영화를 선택하십시오";
+"CHOOSE_PHOTO_VIDEO" = "라이브러리에서 선택";
+"LBL_PROFILE_TEXT" = "프로필 정보 변경이 필요한 경우 관리자에게 연락주세요.";
+"LBL_PROFILE_NAME" = "카카오톡  :";
+"LBL_PROFILE_MOB" = "전화번호  :";
+"LBL_PROFILE_EMAIL" = "Email  :";
+"LBL_PHOTOS_VIDEO" = "사진 및 동영상";
+
+//ContestantProfileVC
+"BTN_VOTE" = "투표하기";
+"BTN_SHARE" = "공유하기";
+"BTN_DOUBLE_CHECK" = "중복확인"; //
+"LBL_TABBAR_VOTE" = "투표하기";
+"LBL_TABBAR_STAR_CHARGING" = "스타충전";
+"LBL_TABBAR_GIFT" = "선물하기";
+"LBL_TABBAR_VOTING_RECORED" = "Voting record";
+"LBL_TABBAR_VOTE_LIST" = "득표내역";
+"BTN_EDIT_PROFILE" = "나의정보 수정";
+"LBL_VOTE" = "Vote";
+"ALERT_VIDEO_NOT_FOUND" = "비디오를 찾을 수 없습니다";
+"TXT_PLACEHOLDER_TYPE_MESSAGE" = "Leave a message of support.";
+"BTN_CHEERING" = "Cheering";
+"LBL_REPLAY" = "Reply";
+"LBL_VIEW_ALL" = "---- View reply";
+"LBL_AGE" = "나이";
+"LBL_HEIGHT" = "신장";
+"LBL_WEIGHT" = "무게";
+
+//SettingVC
+"LBL_PUSH_ALARM" = "푸시알림";
+"LBL_SOUND_NOTIFICATION" = "소리알림";
+"LBL_VIBRATION_ALERT" = "진동알림";
+"NAVIGATION_BAR_APP_SETTINGS" = "App settings";
+"BTN_COMPLETE" = "완료";
+"LBL_APP_VERSION" = "버전정보";
+
+//PushNotificationVC
+"NAVIGATION_BAR_NOTIFICATION" = "Notification";
+
+
+//NoticeVC
+"NAVIGATION_BAR_NOTICE" = "Notice";
+
+// Term and condition
+"NAVIGATION_BAR_TEARM_CONDITION" = "상세 보기";
+
+//GiftVC
+"BTN_SEND" = "확인";
+
+//AttendanceCheckVC
+"LBL_TITLE_ATTRENDANCE_CHECK" = "출석체크";
+"LBL_ATTRENDANCE_CHECK_COMP" = "출석체크 완료";
+"LBL_STAR_HAS_BEEN_EARNED" = "적립되었습니다.";
+
+//AttendanceCheckConfirmVC
+"LBL_ATTRENDANCE_CHECK_COMP_ON_DAY" = "당일 출석체크를 완료하였습니다";
+"LBL_ATTENDANCE_ONLY_ONEY_ONCE_A_DAY" = "1일 1회만 가능";
+
+//WebViewWithTabVC
+"TOLL_STATION" = "유료 충전소";
+"ATTENDANCE_CHECK" = "출석체크";
+"FREE_STATION" = "무료 충전소";
+"STAR_SHOP" = "스타샵";
+"COUPAN_STATION" = "쿠폰 충전소";
+"GIFT" = "선물하기";
+
+"TOLL_STATION_DETAILS" = "충전한 스타로 원하는 참가자에서 투표하세요!";
+"ATTENDANCE_CHECK_DETAILS" = "매일 매일 출석체크하여 스타를 받아가세요!";
+"FREE_STATION_DETAILS" = "동영상을 시청하면 스타가 10개 증정됩니다!(하루 최대 5회)";
+"STAR_SHOP_DETAILS" = "물건을 구입하고 스타를 받아가세요!";
+"COUPAN_STATION_DETAILS" = "충전한 쿠폰으로 참가자에게 투표하세요!";
+"GIFT_DETAILS" = "특별한 날, \n스타를 선물하세요!";
+
+"LBL_CHARGING_STATION1" = "무료 충전소에서 지급된 마이스타는 시청 후 바로 지급됩니다.";
+"LBL_CHARGING_STATION2" = "출석체크 하여 지급된 마이스타는 출석체크 완료 시 지급됩니다";
+"LBL_CHARGING_STATION3" = "지급되는 마이스타는 제공사의 정책에 따라 반영이 다소 늦어질 수 있습니다.";
+
+//WebViewChargingStationPaidVC
+"LBL_PAID_CHARGING_STATION1" = "상품을 구매하면 App Store계정과 연결된 신용카드로 요금이 청구 됩니다.";
+"LBL_PAID_CHARGING_STATION2" = "결제 후에는 App Store 계정 설정에서 구독을 변경/취소 할 수 있습니다.";
+"LBL_PAID_CHARGING_STATION3" = "대량의 ‘스타’ 구매를 원하시는 분은 고객센터로 문의 바랍니다. (전화번호)";
+
+//GiftVC2
+"LBL_GIFT_POPUP_VIEW" = "선물하기";
+"TXT_PLACEHOLDER_INPUT_GIFT_PHONE" = "받는 사람";
+"TXT_PLACEHOLDER_INPUT_GIFT_STAR" = "선물 스타";
+"LBL_NUMBER_OF_STARS_PRESENT" = "My스타는 선물 가능한 스타의 수량입니다.";
+"LBL_PRESENTED_STAR_NOT_CANCEL" = "선물한 스타는 취소가 불가능합니다.";
+"LBL_WOULD_LIKE_TO_GIVE" = "개를 선물하시겠습니까";
+"LBL_GIFT_TO" = "님에게";
+"ALERT_ENTER_STAR" = "별표를 입력하십시오";
+ 
+ */
+>>>>>>> 75a37ff105ad4082590c0ed72e572188711531e2

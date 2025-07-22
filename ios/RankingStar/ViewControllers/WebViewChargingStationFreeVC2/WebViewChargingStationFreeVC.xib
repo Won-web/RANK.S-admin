@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewChargingStationFreeVC" customModule="RankingStar" customModuleProvider="target">
+            <connections>
+                <outlet property="navBar" destination="XxS-CI-AgL" id="tHp-Ec-Bad"/>
+                <outlet property="objWKWebView" destination="7Gp-p6-imQ" id="HLs-6Z-tGS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxS-CI-AgL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="pHy-Jl-e87"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Title" id="fm7-KM-KRr"/>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ini-2a-RRp">
+                    <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                    <subviews>
+                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gp-p6-imQ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7Gp-p6-imQ" secondAttribute="trailing" id="QMO-wo-pkj"/>
+                        <constraint firstAttribute="bottom" secondItem="7Gp-p6-imQ" secondAttribute="bottom" id="UsP-2s-VZ1"/>
+                        <constraint firstItem="7Gp-p6-imQ" firstAttribute="top" secondItem="Ini-2a-RRp" secondAttribute="top" id="jle-3x-dLO"/>
+                        <constraint firstItem="7Gp-p6-imQ" firstAttribute="leading" secondItem="Ini-2a-RRp" secondAttribute="leading" id="jrL-kV-XSW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="XxS-CI-AgL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CMj-Y0-JvV"/>
+                <constraint firstAttribute="bottom" secondItem="Ini-2a-RRp" secondAttribute="bottom" id="dnA-AU-qMw"/>
+                <constraint firstItem="Ini-2a-RRp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="e4h-uP-Iey"/>
+                <constraint firstItem="Ini-2a-RRp" firstAttribute="top" secondItem="XxS-CI-AgL" secondAttribute="bottom" id="gcp-XE-HBM"/>
+                <constraint firstItem="XxS-CI-AgL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="icC-rw-X5d"/>
+                <constraint firstItem="XxS-CI-AgL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jdb-TE-lfp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ini-2a-RRp" secondAttribute="trailing" id="l9F-Sh-Siv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="105"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivsearchpic"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="@dimen/activity_vertical_margin"
+
+            tools:srcCompat="@drawable/tst" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSearchContestantName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_two"
+            android:textSize="@dimen/_14ssp"
+            app:fontFamily="@font/nanumbarun_gothic"
+            app:layout_constraintStart_toEndOf="@id/ivsearchpic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivsearchpic"
+            android:layout_margin="@dimen/activity_vertical_margin"
+
+            tools:text="contestant name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSearchContestName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="29dp"
+            android:textColor="@color/gunmatel"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/nanumbarun_gothic"
+            app:layout_constraintStart_toEndOf="@id/ivsearchpic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSearchContestantName"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/_4sdp"
+            tools:text="contest name" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            app:layout_constraintTop_toBottomOf="@id/ivsearchpic"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

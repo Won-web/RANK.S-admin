@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.etech.starranking.ui.activity.ui.dashboard.home.ContestListsFragment"
+        tools:layout="@layout/fragment_layout" />
+
+    <fragment
+        android:id="@+id/nav_freeCahrging"
+        android:name="com.etech.starranking.ui.activity.ui.dashboard.starShop.StarShopFragment"
+        android:title="@string/star_charging_station"
+        tools:layout="@layout/nav_fragment_freee_charging" />
+
+    <fragment
+        android:id="@+id/nav_sendStar"
+        android:name="com.etech.starranking.ui.activity.ui.dashboard.gift.SendStarFragment"
+        android:title="@string/str_send_a_star"
+        tools:layout="@layout/nav_fragment_send_star" />
+
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.etech.starranking.ui.activity.ui.dashboard.history.HistoryFragment"
+        android:label="@string/str_history"
+        tools:layout="@layout/nav_fragment_history" />
+    <fragment
+        android:id="@+id/nav_guide"
+        android:name="com.etech.starranking.ui.activity.ui.dashboard.webview.WebviewFragment"
+        android:label="@string/str_history"
+        tools:layout="@layout/nav_fragment_guide" />
+
+
+    <fragment
+        android:id="@+id/nav_notice"
+        android:name="com.etech.starranking.ui.activity.ui.dashboard.notice.NoticeFragment"
+        android:label="@string/str_notice"
+        tools:layout="@layout/nav_fragment_notice" />
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.etech.starranking.ui.activity.ui.dashboard.notification.NotificationFragment"
+        android:label="@string/str_notification"
+        tools:layout="@layout/nav_fragment_notifications" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.etech.starranking.ui.activity.ui.dashboard.Settings.SettingsFragment"
+        android:label="@string/str_settings"
+        tools:layout="@layout/nav_fragment_settings" />
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/nav_share"-->
+    <!--        android:name="com.etech.starranking.ui.activity.ui.share.ShareFragment"-->
+    <!--        android:label="@string/menu_share"-->
+    <!--        tools:layout="@layout/fragment_share" />-->
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/nav_send"-->
+    <!--        android:name="com.etech.starranking.ui.activity.ui.send.SendFragment"-->
+    <!--        android:label="@string/menu_send"-->
+    <!--        tools:layout="@layout/fragment_send" />-->
+</navigation>

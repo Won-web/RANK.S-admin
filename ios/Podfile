@@ -1,0 +1,83 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'RankingStar' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for RankingStar
+
+  # Alamofire
+  pod 'Alamofire' #Alamofire (4.7.3)
+   
+   # Network Connection
+   pod 'ReachabilitySwift'
+   
+   # Material fremwork pod
+   pod 'Material'
+   
+   # Pods text field scrolling auto as keyboard
+   pod 'IQKeyboardManagerSwift' , '~> 5.0.7'
+   
+   # Image download and load purpose.
+   pod 'Kingfisher', '~> 5.0'
+   
+   #Show Popup Dialog, show Drop Down Popup
+   pod 'LSDialogViewController'
+   pod 'SnapKit'
+   pod 'ContextMenu'
+   
+   # Left Side Menu
+   pod 'SlideMenuControllerSwift'
+   
+   # Progress Bar
+   pod 'ZVProgressHUD', '~> 2.0.0'
+   
+   # Pagination
+   pod 'CCBottomRefreshControl'
+
+   # PagerView
+   pod 'TYCyclePagerView'
+   
+   # AssetsPickerViewController
+   pod 'AssetsPickerViewController', '~> 2.0'
+   
+   # ACTION SHEET PICKER
+   pod 'ActionSheetPicker-3.0'
+   
+   # google sign in
+   pod 'GoogleSignIn'
+   
+   # Pods for Hanuman Chalisa
+   pod 'FBSDKCoreKit'
+   pod 'FBSDKShareKit'
+   pod 'FBSDKLoginKit'
+   
+   # KakaoOpenSDK
+   pod 'KakaoOpenSDK'
+   
+   # Gif Animated Image
+   pod 'SwiftyGif'
+   # //This library has major changes inside pod file after installed, if anyone removes this pod all code and regarding to player setting will be REMOVEDter
+   
+   # Phone number formet
+   pod 'AnyFormatKit'
+   
+   # photo video preview
+   pod 'Lightbox'
+   
+   # Tab bar
+   pod 'Parchment'
+   
+   # Naverid Login
+   pod 'naveridlogin-sdk-ios'
+   
+   #SwiftyXMLParser
+   pod "SwiftyXMLParser", :git => 'https://github.com/yahoojapan/SwiftyXMLParser.git'
+   
+   # Progress bar with animation
+   pod 'GTProgressBar'   # 0.3.3
+   
+   # YouTubePlayer (1.2.1)
+   pod 'YoutubePlayerView'
+end

@@ -1,0 +1,280 @@
+//
+//  LoginVC.swift
+//  RankingStar
+//
+//  Created by Jinesh on 13/12/19.
+//  Copyright © 2019 Etech. All rights reserved.
+//
+
+import UIKit
+import Material
+
+class SideMenuVC: BaseVC {
+    
+    
+   // var objChargingStarHistoryModel : ChargingStarHistoryModel!
+    
+    @IBOutlet var viewHeaderBG: UIView!
+    @IBOutlet var imgUserProfile: UIImageView!
+    @IBOutlet var viewUserLogin: UIView!
+    @IBOutlet var lblUserName: UILabel!
+    @IBOutlet var lblUserEmail: UILabel!
+    @IBOutlet var btnEditProfile: UIButton!
+    @IBOutlet var btnLogOut: UIButton!
+    @IBOutlet var viewUserLogout: UIView!
+    @IBOutlet var btnLogin: UIButton!
+    @IBOutlet var btnSignUp: UIButton!
+    @IBOutlet var btnBotton: UIButton!
+
+    @IBOutlet var tblView: UITableView!
+    
+    
+    var arrSideMenuImages:[String]!
+    var arrSideMenuNames:[String]!
+    
+    var mainVC : UIViewController!
+    var chargingHistoryVC : UIViewController!
+    var webViewVC : UIViewController!
+    var noticeVC : UIViewController!
+    var pushNotificationVC : UIViewController!
+    
+    
+    var selectedVCCell:Int = 0;
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       // objChargingStarHistoryModel = ChargingStarHistoryModel(vc: self)
+        
+        tblView.delegate = self
+        tblView.dataSource = self
+        tblView.separatorStyle = .none
+        tblView.register(UINib(nibName: Constant.CellIdentifier.SIDE_MENU_CELL, bundle: nil), forCellReuseIdentifier: Constant.CellIdentifier.SIDE_MENU_CELL)
+        
+         arrSideMenuImages = [Constant.Image.home_black, Constant.Image.history, Constant.Image.free_charge, Constant.Image.star_shop, Constant.Image.free_charge, Constant.Image.ic_note, Constant.Image.check_box_check, ""]
+        arrSideMenuNames = ["TAB_HOME", "TAB_CHARGING_HISTORY", "TAB_FREE_CHARGEING", "TAB_STAR_SHOP", "TAB_PAID_CHARGING", "TAB_NOTICE_BOARD", "TAB_PUSH_BOARD"]
+        
+        mainVC = MainVC()
+        chargingHistoryVC = ChargingStarHistoryVC()
+        webViewVC = WebViewVC()
+        
+        
+        setUIColor()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       // Util.setStatusBarHide(isHidden: true)
+        //Util.statusBarColor(color: Constant.Color.NAVIGATION_BAR_BG_COLOR)
+        if(Util.getIsUserLogin() == "0")
+        {
+            viewUserLogout.isHidden = false
+            viewUserLogin.isHidden = true
+        }else
+        {
+            viewUserLogout.isHidden = true
+            viewUserLogin.isHidden = false
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Util.setStatusBarHide(isHidden: false)
+       // Util.statusBarColor(color: UIColor.clear)
+    }
+
+    //MARK: custom method
+    func setUIColor()
+    {
+//        Util.statusBarColor(color: Constant.Color.NAVIGATION_BAR_BG_COLOR)
+       
+        viewHeaderBG.backgroundColor = Constant.Color.NAVIGATION_BAR_BG_COLOR
+        imgUserProfile.setImageFit(imageName: Constant.Image.user_profile)
+        
+        imgUserProfile.backgroundColor = UIColor.white
+        imgUserProfile.layer.cornerRadius = imgUserProfile.frame.size.height/2
+        imgUserProfile.clipsToBounds = true
+        
+//        viewUserLogin.isHidden = true
+//        if(Util.getIsUserLogin() == "0")
+//        {
+//            viewUserLogout.isHidden = false
+//            viewUserLogin.isHidden = true
+//        }else
+//        {
+//            viewUserLogout.isHidden = true
+//            viewUserLogin.isHidden = false
+//        }
+        
+        
+        
+        lblUserName.setHeaderUIStyleWhite(value: "UserName")
+        lblUserEmail.setSmallUIStyleWhite(value: "user1@gmail.com")
+        btnLogOut.setTitle(txtValue: "BTN_LOGOUT")
+        btnLogOut.setBtnLoginUI()
+        btnLogin.setTitle(txtValue: "BTN_LOGIN")
+        btnLogin.setBtnLoginUI()
+        btnSignUp.setTitle(txtValue: "BTN_SIGN_UP")
+        btnSignUp.setBtnLoginUI()
+        btnEditProfile.setTitle(txtValue: "BTN_EDIT_PROFILE")
+        btnEditProfile.setBtnLoginUI()
+        btnBotton.setTitle(txtValue: "BTN_BOTTOM")
+        btnBotton.setBtnSemiBlackBorderAndTextUI()
+        
+        
+//        let viewContEarningTabbed:CustomTabGestur = CustomTabGestur(target: self, action: #selector(self.viewContEarningTabbed))
+//        viewContEarning.isUserInteractionEnabled = true
+//        viewContEarning.addGestureRecognizer(viewContEarningTabbed)
+        
+    }
+    
+        func getChargingHistoryAPI() {
+            if(Util.isNetworkReachable()) {
+                self.showProgress()
+                DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+                    self.hideProgress()
+                }
+               // let objChargingHistoryModel = ChargingHistoryModel()
+               // objChargingStarHistoryModel.chargingHistoryAPI(objChargingHistoryModel : objChargingHistoryModel)
+            }else {
+                showAlert(msg: "NO_INTERNET_CONNECTION")
+    //            refreshControl.endRefreshing()
+            }
+        }
+    
+    func changeNavigationBar(index : Int)
+    {
+        var vc : UIViewController!
+        
+        if(index == 0) {
+            vc = self.mainVC
+            //self.slideMenuController()?.changeMainViewController(self.mainVC, close: true)
+        }
+        else if(index == 1) {
+            vc = self.chargingHistoryVC
+            //self.slideMenuController()?.changeMainViewController(self.chargingHistoryVC, close: true)
+        }
+<<<<<<< HEAD
+        else if(index == 2 || index == 3 || index == 4)
+        {
+           // (self.webViewVC as! WebViewVC).selectedVCIndex = index - 1
+            
+            if(index == 2)
+            {
+                (self.webViewVC as! WebViewVC).strNavBarTitle = "NAV_FREE_CHARGEING"
+            }else if(index == 3)
+            {
+                (self.webViewVC as! WebViewVC).strNavBarTitle = "NAV_STAR_SHOP"
+            }else if(index == 4)
+            {
+                (self.webViewVC as! WebViewVC).strNavBarTitle = "NAV_PAID_CHARGING"
+            }
+            self.slideMenuController()?.changeMainViewController(self.webViewVC, close: true)
+        }
+=======
+        else if(index == 2 || index == 3 || index == 4) {
+            (self.webViewVC as! WebViewVC).selectedVCIndex = index - 1
+            vc = self.webViewVC
+            //self.slideMenuController()?.changeMainViewController(self.webViewVC, close: true)
+        }
+        
+        let navMainVC  : UINavigationController = UINavigationController(rootViewController: vc)
+        navMainVC.navigationController?.isNavigationBarHidden = true
+        navMainVC.isNavigationBarHidden = true
+        
+        self.slideMenuController()?.changeMainViewController(navMainVC, close: true)
+>>>>>>> ec1010ee08ebe4ed5a62c31d8796386e0cfaf8c5
+    }
+    
+    //MARK:- Button Clicked
+    @IBAction func btnEditProfileClicked(_ sender: UIButton) {
+        self.toggleRight()
+            let objEditUserProfileVC = EditUserProfileVC()
+            Util.sideMenuNavVC.pushViewController(objEditUserProfileVC, animated: true)
+    }
+    
+    @IBAction func btnLogOutClicked(_ sender: UIButton) {
+        Util.setIsUserLogin(strValue: "0")
+        viewUserLogout.isHidden = false
+        viewUserLogin.isHidden = true
+    }
+    
+    @IBAction func btnLoginClicked(_ sender: UIButton) {
+        self.toggleRight()
+        let objLoginVC = LoginVC()
+        Util.sideMenuNavVC.pushViewController(objLoginVC, animated: true)
+        
+//        viewUserLogin.isHidden = false
+//        viewUserLogout.isHidden = true
+    }
+    
+    @IBAction func btnSignUpClicked(_ sender: UIButton) {
+        self.toggleRight()
+            let objSignUpVC = SignUpVC()
+            Util.sideMenuNavVC.pushViewController(objSignUpVC, animated: true)
+    }
+    
+    @IBAction func btnBottonClicked(_ sender: UIButton) {
+    }
+    
+   //MARK:- View model methods
+   func onLeadDashboardCompleted() {
+       
+   }
+       
+      
+       
+   func onApiSuccessHideProgress() {
+        self.hideProgress()
+   }
+   
+   func showMessage(message: String) {
+       self.showAlert(msg: message)
+   }
+    
+
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        print(textField.text)
+    }
+    
+}
+
+extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrSideMenuNames.count
+//        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.CellIdentifier.SIDE_MENU_CELL) as! SideMenuCell
+        
+        cell.selectionStyle = .none
+        cell.lblName.setLoginNormalUIStyleFullBack(value: arrSideMenuNames[indexPath.row])
+        //cell.lblCounter.setLoginNormalUIStyleNavColorForCell(value: "\(indexPath.row)A")
+        cell.imgNext.setImageFit(imageName: Constant.Image.next)
+        cell.imgTabIcon.setImageFit(imageName: arrSideMenuImages[indexPath.row])
+        //cell.viewSeprator.backgroundColor = Constant.Color.VIEW_BORDER_COLOR
+        cell.viewSeprator.layer.borderWidth = 0.3
+        cell.viewSeprator.borderColor =  Constant.Color.VIEW_BORDER_SEME_LIGHT_COLOR
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+<<<<<<< HEAD
+//        let index = indexPath.row
+//        if(index != selectedVCCell)
+//        {
+           // selectedVCCell = index
+            changeNavigationBar(index : indexPath.row)
+       // }
+=======
+        let index = indexPath.row
+        if(index != selectedVCCell) {
+            selectedVCCell = index
+            changeNavigationBar(index : indexPath.row)
+        }
+>>>>>>> ec1010ee08ebe4ed5a62c31d8796386e0cfaf8c5
+    }
+    
+   
+}
+

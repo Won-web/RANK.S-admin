@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PushNotificationListVC" customModule="RankingStar" customModuleProvider="target">
+            <connections>
+                <outlet property="btnSearchClose" destination="rk1-y0-iAL" id="nXs-CO-kB2"/>
+                <outlet property="navBar" destination="nad-gF-jNf" id="szs-VP-xwR"/>
+                <outlet property="tblView" destination="qey-F0-hny" id="c46-vc-dJu"/>
+                <outlet property="txtSearch" destination="Ztd-3h-TB3" id="e6w-IS-wNm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContSearch" destination="QU1-Ig-ZZs" id="w9k-M8-p3s"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="972"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-LX-dMP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="972"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nad-gF-jNf">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="WjE-in-zjC"/>
+                            </constraints>
+                            <items>
+                                <navigationItem title="Title" id="VVU-eu-aIC"/>
+                            </items>
+                        </navigationBar>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QU1-Ig-ZZs">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-3h-TB3">
+                                    <rect key="frame" x="10" y="0.0" width="320" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rk1-y0-iAL">
+                                    <rect key="frame" x="340" y="9.6666666666666643" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="lI3-kv-1cs"/>
+                                        <constraint firstAttribute="height" constant="25" id="n41-jd-khI"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="btnSearchClicked:" destination="-1" eventType="touchUpInside" id="0uM-lb-3xo"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="4Eh-6i-KWP"/>
+                                <constraint firstItem="Ztd-3h-TB3" firstAttribute="leading" secondItem="QU1-Ig-ZZs" secondAttribute="leading" constant="10" id="5MN-kL-VA4"/>
+                                <constraint firstItem="rk1-y0-iAL" firstAttribute="centerY" secondItem="QU1-Ig-ZZs" secondAttribute="centerY" id="JvL-Mg-pPC"/>
+                                <constraint firstAttribute="bottom" secondItem="Ztd-3h-TB3" secondAttribute="bottom" id="X1v-Fm-jP5"/>
+                                <constraint firstItem="rk1-y0-iAL" firstAttribute="leading" secondItem="Ztd-3h-TB3" secondAttribute="trailing" constant="10" id="fbL-9v-zpb"/>
+                                <constraint firstItem="Ztd-3h-TB3" firstAttribute="top" secondItem="QU1-Ig-ZZs" secondAttribute="top" id="fe9-Cn-BRj"/>
+                                <constraint firstAttribute="trailing" secondItem="rk1-y0-iAL" secondAttribute="trailing" constant="10" id="fvh-mn-aTS"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQC-5r-bGd">
+                            <rect key="frame" x="0.0" y="44" width="375" height="928"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qey-F0-hny">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="928"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="qey-F0-hny" secondAttribute="bottom" id="AC0-gH-Fih"/>
+                                <constraint firstAttribute="trailing" secondItem="qey-F0-hny" secondAttribute="trailing" id="AQf-8y-ywU"/>
+                                <constraint firstItem="qey-F0-hny" firstAttribute="top" secondItem="QQC-5r-bGd" secondAttribute="top" id="Fei-gE-m8U"/>
+                                <constraint firstItem="qey-F0-hny" firstAttribute="leading" secondItem="QQC-5r-bGd" secondAttribute="leading" id="nLf-Fd-0NS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="QQC-5r-bGd" firstAttribute="top" secondItem="nad-gF-jNf" secondAttribute="bottom" id="1wG-fB-nto"/>
+                        <constraint firstItem="QU1-Ig-ZZs" firstAttribute="top" secondItem="Wmh-LX-dMP" secondAttribute="top" id="7SV-ko-6ce"/>
+                        <constraint firstAttribute="trailing" secondItem="QU1-Ig-ZZs" secondAttribute="trailing" id="7ep-Lg-l0i"/>
+                        <constraint firstAttribute="bottom" secondItem="QQC-5r-bGd" secondAttribute="bottom" id="DYV-O6-yDq"/>
+                        <constraint firstAttribute="trailing" secondItem="nad-gF-jNf" secondAttribute="trailing" id="G5V-gL-sFb"/>
+                        <constraint firstItem="nad-gF-jNf" firstAttribute="leading" secondItem="Wmh-LX-dMP" secondAttribute="leading" id="fJk-9U-F4y"/>
+                        <constraint firstItem="QU1-Ig-ZZs" firstAttribute="leading" secondItem="Wmh-LX-dMP" secondAttribute="leading" id="gsv-ft-07p"/>
+                        <constraint firstItem="QQC-5r-bGd" firstAttribute="leading" secondItem="Wmh-LX-dMP" secondAttribute="leading" id="hXX-7C-oRE"/>
+                        <constraint firstItem="nad-gF-jNf" firstAttribute="top" secondItem="Wmh-LX-dMP" secondAttribute="top" id="j7j-ZB-1wu"/>
+                        <constraint firstAttribute="trailing" secondItem="QQC-5r-bGd" secondAttribute="trailing" id="mwy-FU-xAg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Wmh-LX-dMP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Kbl-a3-9OI"/>
+                <constraint firstItem="Wmh-LX-dMP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rGI-oe-fCa"/>
+                <constraint firstAttribute="bottom" secondItem="Wmh-LX-dMP" secondAttribute="bottom" id="vLk-rW-4G3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wmh-LX-dMP" secondAttribute="trailing" id="yfS-03-NCL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="259.97001499250376"/>
+        </view>
+    </objects>
+</document>

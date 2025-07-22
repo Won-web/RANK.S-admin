@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:background="#e7e7e7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivContestantImg"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="0.25"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                 />
+
+            <RelativeLayout
+                android:id="@+id/rlContestantRank"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvContestantRank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    tools:text="1st "
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/nanumbarun_gothic_bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvContestantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Seyeon Kim"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="5dp"
+                    app:fontFamily="@font/nanumbarun_gothic_bold"
+                    android:layout_gravity="center" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvContestantVotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="15,500"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:drawablePadding="3dp"
+                    android:drawableLeft="@drawable/ic_star"
+                    app:fontFamily="@font/nanumbarun_gothic_bold"
+                    android:layout_gravity="center" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVote"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_gradient_light_dark"
+                    android:text="@string/str_btn_vote"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    app:fontFamily="@font/nanumbarun_gothic_bold"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

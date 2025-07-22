@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:tnkad_sdk:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/tnkad_sdk/build/.transforms/a4037cba2b5878fdf48b4a18ab262bf3/jetified-tnkad_sdk/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/tnkad_sdk/build/.transforms/a4037cba2b5878fdf48b4a18ab262bf3/jetified-tnkad_sdk/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

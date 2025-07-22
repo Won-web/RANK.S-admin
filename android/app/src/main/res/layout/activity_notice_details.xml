@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.activity.ui.dashboard.notice.NoticeDetailsActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar_back_charge" />
+
+        <LinearLayout
+            android:id="@+id/llTitleContainer"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDeatilNoticeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Notice1"
+                android:textColor="@color/black"
+                app:fontFamily="@font/nanumbarun_gothic" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDetailNoticeTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_vertical"
+                tools:text="2020.01.01"
+                app:fontFamily="@font/nanumbarun_gothic" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/app_margin"
+                android:background="@color/grey" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDeatilNoticeContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:lines="4"
+                android:maxLines="4"
+                tools:text="Hello! Notice\nPlease check the details."
+                android:visibility="gone"
+                app:fontFamily="@font/nanumbarun_gothic" />
+
+        </LinearLayout>
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>

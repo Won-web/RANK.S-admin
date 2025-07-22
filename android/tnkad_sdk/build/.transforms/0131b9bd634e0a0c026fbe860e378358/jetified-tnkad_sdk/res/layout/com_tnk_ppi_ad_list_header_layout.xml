@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/com_tnk_ppi_ad_list_header_background_color"
+    android:paddingLeft="@dimen/com_tnk_common_15dp"
+    android:paddingRight="@dimen/com_tnk_common_15dp"
+    android:paddingTop="@dimen/com_tnk_ppi_ad_list_header_padding_v"
+    android:paddingBottom="@dimen/com_tnk_ppi_ad_list_header_padding_v"
+    >
+
+    <Button
+        android:id="@+id/com_tnk_ppi_ad_list_help_desk_button"
+        android:layout_width="@dimen/com_tnk_ppi_ad_list_header_help_button_size"
+        android:layout_height="@dimen/com_tnk_ppi_ad_list_header_help_button_size"
+        android:background="@drawable/com_tnk_icon_help"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="0dp"
+        />
+
+    <Button
+        android:id="@+id/com_tnk_ppi_ad_list_style_button"
+        android:layout_width="@dimen/com_tnk_ppi_ad_list_style_button_size"
+        android:layout_height="@dimen/com_tnk_ppi_ad_list_style_button_size"
+        android:background="@drawable/com_tnk_icon_list"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="0dp"
+        />
+
+    <TextView
+        android:id="@+id/com_tnk_ppi_ad_list_section_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/com_tnk_ppi_ad_list_style_button"
+        android:layout_toRightOf="@id/com_tnk_ppi_ad_list_help_desk_button"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/com_tnk_offerwall_section_text_size"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        />
+
+</RelativeLayout>

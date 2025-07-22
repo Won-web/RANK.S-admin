@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewVC" customModule="RankingStar" customModuleProvider="target">
+            <connections>
+                <outlet property="navBar" destination="fRe-r8-7DU" id="O8c-OU-EEf"/>
+                <outlet property="objWKWebView" destination="IIA-MS-dxf" id="7A2-sR-xFa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vob-Wj-On8">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="764-dL-cAZ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <subviews>
+                                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRe-r8-7DU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="GDC-dw-kWZ"/>
+                                    </constraints>
+                                    <items>
+                                        <navigationItem title="Title" id="5L8-cN-KRs"/>
+                                    </items>
+                                </navigationBar>
+                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-MS-dxf">
+                                    <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <wkWebViewConfiguration key="configuration">
+                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                        <wkPreferences key="preferences"/>
+                                    </wkWebViewConfiguration>
+                                </wkWebView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="IIA-MS-dxf" secondAttribute="trailing" id="5qz-gA-Zwj"/>
+                                <constraint firstItem="IIA-MS-dxf" firstAttribute="top" secondItem="fRe-r8-7DU" secondAttribute="bottom" id="FDJ-Y2-3Eo"/>
+                                <constraint firstAttribute="trailing" secondItem="fRe-r8-7DU" secondAttribute="trailing" id="G5b-sb-1wa"/>
+                                <constraint firstItem="IIA-MS-dxf" firstAttribute="leading" secondItem="764-dL-cAZ" secondAttribute="leading" id="cJr-eU-9Uy"/>
+                                <constraint firstItem="fRe-r8-7DU" firstAttribute="leading" secondItem="764-dL-cAZ" secondAttribute="leading" id="llu-hl-OPw"/>
+                                <constraint firstAttribute="bottom" secondItem="IIA-MS-dxf" secondAttribute="bottom" id="oEF-sh-4lk"/>
+                                <constraint firstItem="fRe-r8-7DU" firstAttribute="top" secondItem="764-dL-cAZ" secondAttribute="top" id="oT6-6z-jaQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="764-dL-cAZ" secondAttribute="trailing" id="DgT-ZM-ZDm"/>
+                        <constraint firstAttribute="bottom" secondItem="764-dL-cAZ" secondAttribute="bottom" id="UNa-Nl-7FP"/>
+                        <constraint firstItem="764-dL-cAZ" firstAttribute="top" secondItem="Vob-Wj-On8" secondAttribute="top" id="ZOk-uF-CRY"/>
+                        <constraint firstItem="764-dL-cAZ" firstAttribute="leading" secondItem="Vob-Wj-On8" secondAttribute="leading" id="s8j-wB-Y5a"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Vob-Wj-On8" secondAttribute="bottom" id="Fqc-7G-bCH"/>
+                <constraint firstItem="Vob-Wj-On8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UQF-2m-awU"/>
+                <constraint firstItem="Vob-Wj-On8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="b3o-9V-Jbi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vob-Wj-On8" secondAttribute="trailing" id="ltM-Qz-HH6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="132"/>
+        </view>
+    </objects>
+</document>

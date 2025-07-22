@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+     >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+
+        android:id="@+id/layoutTool"
+        layout="@layout/layout_toolbar_back_charge" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="20dp">
+
+   <androidx.appcompat.widget.AppCompatTextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/str_lbl_email_verification"
+       android:gravity="center_horizontal"
+       android:textSize="@dimen/_18sdp"
+       android:textColor="@color/colorAccent"
+       android:textStyle="bold"
+       android:layout_marginTop="@dimen/app_margin_max"
+       android:layout_marginBottom="@dimen/app_margin_max"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/app_margin_max"
+            android:textColor="@color/black"
+            android:text="@string/str_lbl_enter_otp_sent"
+            android:gravity="center_horizontal"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/app_margin_max"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etOtpNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/nanumbarun_gothic_light"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:hint="@string/str_enter_otp"
+        android:background="@drawable/edittext_round"
+        android:padding="10dp"
+        android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnVerify"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_filled_login"
+            android:fontFamily="@font/nanumbarun_gothic_bold"
+            android:text="@string/str_lbl_verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:fontFamily="@font/nanumbarun_gothic_bold" />
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_marginTop="@dimen/app_margin"
+         android:gravity="center_horizontal">
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tvResendOtp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/str_lbl_resend_otp"
+             android:textColor="@color/black"
+             android:textSize="@dimen/_12sdp"
+             />
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tvTimer"
+             android:layout_marginStart="@dimen/_4sdp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/black"
+             android:textSize="@dimen/_12sdp"/>
+
+     </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+        <include
+            android:id="@+id/extraViews"
+            layout="@layout/layout_extra_views"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutTool"
+            tools:visibility="gone" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

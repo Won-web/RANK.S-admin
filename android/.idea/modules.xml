@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/StarRanking.iml" filepath="$PROJECT_DIR$/StarRanking.iml" group="StarRanking" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="StarRanking/app" />
+      <module fileurl="file://$PROJECT_DIR$/tnkad_sdk/tnkad_sdk.iml" filepath="$PROJECT_DIR$/tnkad_sdk/tnkad_sdk.iml" group="StarRanking/tnkad_sdk" />
+      <module fileurl="file://$PROJECT_DIR$/videotrimer/videotrimer.iml" filepath="$PROJECT_DIR$/videotrimer/videotrimer.iml" group="StarRanking/videotrimer" />
+    </modules>
+  </component>
+</project>

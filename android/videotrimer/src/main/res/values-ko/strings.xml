@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">동영상 다듬기</string>
+    <string name="trimmed_done">동영상 다듬기를 성공적으로 완료하였습니다</string>
+    <string name="trimming">동영상 다듬기 중</string>
+    <string name="compressing">동영상 압축 중...</string>
+    <string name="compressed_done">동영상 압축을 성공적으로 완료하였습니다</string>
+    <string name="video_shoot_tip">%d초 길이의 동영상을 업로드할 수 있습니다</string>
+    <string name="open_permission">Open permission</string>
+    <string name="video_record_des">동영상 촬영을 위해 카메라 및 마이크에 액서스하도록 허용합니다</string>
+    <string name="recording">촬영하기</string>
+    <string name="back">뒤로가기</string>
+    <string name="finish">닫기</string>
+</resources>

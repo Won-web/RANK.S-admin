@@ -1,0 +1,240 @@
+<resources>
+    <string name="app_name">Ranking Star</string>
+
+    <string name="kakao_app_key" translatable="false">a6b3933e5b425ac2e27a134cb851fbc9</string>
+    <string name="kakao_scheme" translatable="false">kakaoa6b3933e5b425ac2e27a134cb851fbc9</string>
+    <string name="kakaolink_host" translatable="false">kakaolink</string>
+    <string name="server_client_id" translatable="false">885105275445-mp0t7k4619efb0iik292pq5n4ogbkdsk.apps.googleusercontent.com</string>
+    <string name="facebook_app_id" translatable="false">467507857286658</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb467507857286658</string>
+    <string name="str_intro_dummy" translatable="false">Contestant will add self introduction over here where they describe something about them</string>
+    <string name="channel_name" translatable="false">Server sync</string>
+    <string name="channel_description" translatable="false">Server sent data displayed through this </string>
+    <!--    <string name="title_activity_main2">Main2Activity</string>-->
+    <string name="str_history">Star History</string>
+    <string name="str_notice">Notice</string>
+    <string name="str_notification">Notification</string>
+
+    <string name="str_btn_goToContestantList">Go To Contestant List</string>
+    <string name="str_btn_homepg">Contest homepage</string>
+
+    <string name="str_btn_edit_profile">Edit profile</string>
+    <string name="str_hint_email">Please Enter Emailid</string>
+    <string name="str_hint_name">Please Enter Name</string>
+    <string name="str_hint_password">Please Enter Password</string>
+    <string name="str_hint_current_password">Please Enter Current Password</string>
+    <string name="str_hint_new_password">Please Enter New Password</string>
+    <string name="str_hint_re_password">Please ReEnter password</string>
+    <string name="str_hint_must_be_same">Password must be same</string>
+    <string name="str_hint_phone_number">Please Enter phone number</string>
+    <string name="str_hint_valid_phone_number">Please Enter Valid phone number</string>
+    <string name="str_hint_enter_nickname">Please Enter nick name</string>
+    <string name="str_hint_enter_valid_email">Please Enter Valid Email</string>
+    <string name="str_val_same_pass">New password and confirm password should be same</string>
+    <string name="str_val_same_old_new_pass">Old password and New password shouldn\'t be same</string>
+
+
+    <string name="str_lbl_phoneNumber">Phone Number</string>
+    <string name="str_lbl_password">Password</string>
+    <string name="str_lbl_name">Name</string>
+    <string name="str_lbl_email_id">Email Id</string>
+    <string name="str_lbl_nickname">Nick Name</string>
+    <string name="str_lbl_update">Update</string>
+    <!--    <string name="str_lbl_showPassword">show password</string>-->
+    <string name="str_lbl_login">Login</string>
+    <string name="str_lbl_send">Send</string>
+    <string name="str_or" translatable="false">Or</string>
+    <string name="str_lbl_google" translatable="false">Google</string>
+    <string name="str_lbl_facebook" translatable="false">Facebook</string>
+    <string name="str_lbl_kakao" translatable="false">Kakao</string>
+    <string name="str_lbl_naver" translatable="false">Naver</string>
+    <!--    <string name="str_lbl_submit">Submit</string>-->
+    <string name="str_lbl_no_data_found">No data Found</string>
+    <string name="str_lbl_signin">signin</string>
+    <string name="str_lbl_share">Share</string>
+    <string name="str_lblhistory">History</string>
+    <string name="str_lbl_loggedin_fb">You are logged in with a Facebook account.</string>
+    <string name="str_lbl_loggedin_google">You are logged in with a Google account.</string>
+    <string name="str_lbl_loggedin_naver">You are logged in with a Naver account.</string>
+    <string name="str_lbl_loggedin_kako">You are logged in with a Kakao account.</string>
+
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="lbl_privacy_policy">Privacy Policy</string>
+
+    <string name="subscribe_to_newsletter_subscription">Subscribe to newsletter subscription</string>
+    <string name="lbl_push_alarm">Push Alarm</string>
+    <string name="lbl_vibration_alert">Vibration Alert</string>
+    <string name="lbl_sound_notification">Sound Notification</string>
+    <string name="str_settings">App Settings</string>
+    <!--    <string name="str_et_leave_msg">Leave a message of support</string>-->
+    <string name="lbl_edit_profile_helper">Please contact your administrator if you need to change your profile information.</string>
+    <string name="lbl_kakotalk">KakaoTalk:</string>
+    <string name="lbl_phone_number">Phone Number:</string>
+    <string name="lbl_email">Email</string>
+
+    <string name="star_charging_station">Star charging station</string>
+    <string name="str_send_a_star">Send a star</string>
+    <string name="str_ranking_star_user_guide">Ranking Star User Guide</string>
+    <string name="str_star_pop_warning">My Star is the number of stars that can vote.\nThe daily number of votes is 1000.</string>
+    <string name="str_btn_useAll">Use all</string>
+    <string name="btn_str_enter_points_to_gift">Enter Points to gift</string>
+    <!--    <string name="str_my_stars">My Stars</string>-->
+    <string name="str_lbl_rank">Rank</string>
+    <string name="str_lbl_profile_nick_name">Profile/Nick Name</string>
+    <string name="str_lbl_votes">Votes</string>
+    <string name="str_lbl_logging_automatically">Logging automatically</string>
+    <string name="btn_str_double_check">Double check</string>
+    <string name="str_lbl_agreement">Agreement</string>
+    <string name="btn_str_registration_completed">Registration completed</string>
+    <string name="str_btn_change_profile_picture">Change Profile Picture</string>
+    <string name="str_lbl_meassage">My word</string>
+    <string name="str_lbl_images">Photos and videos</string>
+    <string name="str_lbl_add">Add</string>
+    <string name="btn_strsubmit">Submit</string>
+    <string name="str_lbl_enter_stars">Please enter number of Stars</string>
+    <string name="btn_str_confirm">Confirm</string>
+    <string name="btn_str_gift">"Gift"</string>
+    <string name="btn_str_edit_profile">Edit Profile</string>
+    <string name="btn_str_complete">Complete</string>
+    <string name="str_btn_vote">Vote</string>
+    <string name="str_lbl_age">Age</string>
+    <string name="str_lbl_height">Height</string>
+    <string name="str_lbl_weight">Weight</string>
+    <string name="str_btn_share">Share</string>
+    <string name="str_lbl_charge">Star charging</string>
+    <string name="str_lbl_gift">Gift</string>
+    <string name="str_lbl_history">Vote list</string>
+    <string name="str_lbl_my_stars">My Stars</string>
+    <string name="str_lbl_100_stars"> stars</string>
+    <string name="str_lbl_available_id">Available id</string>
+    <string name="str_lbl_view_details">View Details</string>
+    <string name="terms_of_use_and_privacy_policy">Terms of Use and Privacy Policy</string>
+    <string name="str_lbl_logout">Logout</string>
+    <string name="str_lbl_earning_history">Earning History</string>
+    <string name="str_lbl_useage_history">Usage History</string>
+    <string name="str_lbl_no_data_found_search">No results were found for your search Please search again.</string>
+    <string name="str_lbl_search_here">Please enter your search term</string>
+    <string name="str_lbl_too_short">Search input too short</string>
+    <string name="str_lbl_click" translatable="false">Click</string>
+    <string name="str_msg_no_network_connection">No internet connection found. Check your connection or try again.</string>
+    <string name="str_btn_retry">Tap to Retry</string>
+    <string name="str_hint_git_cant_cancel">Presented stars cannot be canceled.</string>
+    <string name="str_login_first">You have to login first!!</string>
+    <string name="str_lbl_attendance_check">Attendance check</string>
+    <string name="str_lbl_attendance_check_completed">Attendance check completed</string>
+    <string name="str_lbl_earend">Has been earned.</string>
+    <string name="str_lbl_completed_attendance_of_day">Completed attendance check on the day</string>
+    <string name="str_lbl_only_once_a_day">Only once a day</string>
+    <string name="str_lbl1_inapp">When you make a purchase, the charge is charged to the credit card associated with your App Store account. Will be charged.</string>
+    <string name="str_lbl_dot">\u2022</string>
+    <string name="str_lbl2_inpp">Once you make a payment, you can change / cancel subscriptions in your App Store account settings. There is.</string>
+    <string name="str_lbl3_inpp">If you would like to purchase a large amount of ‘Stars’, please contact our Customer Center.(Phone number)</string>
+    <string name="str_lbl_gift_popup">My star is the number of stars that can be presented.</string>
+    <string name="str_lbl_gift_star_warning">(!) Stars can only be presented to users who have joined the ranking star.</string>
+    <string name="str_lbl_ver">Version Information v</string>
+    <string name="str_ok">OK</string>
+    <string name="str_no_msg">No Introduction Message Available</string>
+    <string name="str_gift_mob_no">Please enter the recipient\'s phone number</string>
+    <string name="str_gift_stars">Please enter the number of stars</string>
+    <string name="str_not_enough_star">You don\'t have enough stars</string>
+    <string name="str_popup_vote_star">Vote star</string>
+
+    <string name="str_signup_view"><u>view</u></string>
+    <string name="str_msg_something_went_wrong">Something went wrong</string>
+
+    <string name="str_lbl_gift_surity"> Would you like to present?</string>
+    <string name="str_lbl_gift_to"> To</string>
+    <string name="lbl_title_settings">Settings</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="msg_alert_you_have_permission">You have deny  some permission , please go to setting and enable it.</string>
+    <string name="str_take_pic">Take A Picture</string>
+    <string name="str_pick_gallary">Pick From Gallery</string>
+    <string name="str_capture_video">Capture A Video</string>
+    <string name="str_pick_video">Pick A Video From Gallery</string>
+    <string name="str_pick_images_gallary">Pick Images From Gallery</string>
+    <string name="str_max_images">Max 10 images allowed</string>
+    <string name="str_max_video">Max 3 video allowed</string>
+    <string name="msg_instagram_not_installed">Instagram not installed or setup is not finished</string>
+    <string name="msg_this_feature_is_under_development">This Feature is Under Development</string>
+    <string name="msg_update_success">Profile Updated successfully!!</string>
+    <string name="str_no_data_found">No data found!!</string>
+    <string name="msg_media_uploading">Media is uploading. Please do not close application</string>
+    <string name="str_btn_vote_popup">Vote</string>
+    <string name="str_star_sent_to">Voted for %s participants with %s stars</string>
+    <string name="str_cant_gift_urself">You can not gift stars to yourself</string>
+    <string name="str_first">st</string>
+    <string name="str_second">nd</string>
+    <string name="str_thrid">rd</string>
+    <string name="str_post_fix_years">years</string>
+    <string name="str_post_fix_cm" translatable="false">cm</string>
+    <string name="str_post_fix_ft" translatable="false">ft</string>
+    <string name="str_post_fix_kg" translatable="false">kg</string>
+    <!--    25-03-2020-->
+    <string name="str_lbl_vote_popup_title">Vote for participant %s</string>
+    <string name="str_lbl_logout_msg">Are you sure you want to logout?</string>
+    <string name="str_lbl_yes">Yes</string>
+    <string name="str_lbl_no">NO</string>
+    <string name="str_hint_valid_password">Password length should be at least 8</string>
+    <!-- 26-03-2020-->
+    <string name="str_hint_your_email_address">Please enter your email address.</string>
+    <string name="str_hint_mobile_phone_number">Please enter your mobile phone number.</string>
+    <string name="str_hint_please_enter_your_new_password">Please enter your new password again.</string>
+    <string name="str_lbl_pleese_support"> Please support the participant.</string>
+    <string name="str_lbl_phone_number">Phone Number</string>
+    <!--    27-03-2020-->
+    <string name="str_lbl_history_postfix">\u0020개</string>
+    <!--    03-04-2020-->
+    <string name="str_msg_accept_term_condition">Please select Terms Condition</string>
+    <string name="str_msg_accept_privacy_policy">Please select Privacy Policies</string>
+    <string name="str_msg_please_povide_valid_user">Please provide valid user</string>
+    <string name="str_msg_enter_proper_data">Enter proper data</string>
+    <string name="str_msg_press_back_again">Press back again to exit</string>
+    <string name="str_msg_gift_success">%s has been presented successfully with %s stars.</string>
+    <!--    09-04-2020-->
+    <string name="str_val_email">Please enter your email address</string>
+    <!--    10-04-2020-->
+    <string name="str_msg_voting_period">It is not voting period</string>
+    <!--    11-04-2020-->
+    <string name="str_menu_search">Search</string>
+    <string name="str_lbl_giunssen">Ericc</string>
+    <string name="str_lbl_oooops">Oooops...</string>
+    <string name="str_lbl_ranking_star">Ranking Star\u0020</string>
+    <!--    12-04-2020-->
+    <string name="str_msg_enter_star">Please enter star</string>
+    <string name="str_msg_star_can_not_0">Presented stars can\'t be 0</string>
+    <!--    15-04-2020-->
+    <string name="str_msg_please_wait_timer_is_running">Please wait timer is running</string>
+    <!--    21-04-2020-->
+    <string name="str_lbl_paid_charge_list_postfix">개</string>
+    <!--    22-04-2020-->
+    <string name="str_lbl_youtube_links">Youtube Links</string>
+    <string name="str_hint_youtube_url">Please enter youtube Link</string>
+    <!--    <string name="str_val_youtube_link">Please enter valid youtube video link</string>-->
+    <string name="str_msg_invalid_youtube_link">Invalid YouTube video link</string>
+    <string name="str_msg_star">STAR</string>
+    <string name="str_lbl_cs">Helpdesk</string>
+
+    <string name="str_lbl_forgot_password">Forgot Password?</string>
+    <string name="str_lbl_forgot">Forgot</string>
+    <string name="str_lbl_email_verification">Email Verification</string>
+    <string name="str_lbl_enter_otp_sent">Enter Otp Sent to</string>
+    <string name="str_lbl_verify">Verify</string>
+    <string name="str_hint_otp">Please Enter Otp</string>
+    <string name="str_hint_valid_otp">Please Enter Valid Otp</string>
+    <string name="str_lbl_resend_otp">Resend Otp</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="str_lbl_create_new_pwd">Create New Password</string>
+    <string name="str_lbl_forgot_pwd">Password?</string>
+    <string name="str_val_forgot_pwd">Your password has been updated successfully</string>
+    <string name="str_enter_otp">Enter Otp</string>
+    <string name="str_change_pwd">Change Password</string>
+    <string name="str_delete_account"><u>Delete Account</u></string>
+    <string name="str_delete_account_title">Are you sure you want to cancel your membership?</string>
+    <string name="str_delete_account_confirm">When you cancel your membership, you will be logged out immediately, and you will be able to participate in voting.
+You can not. Also, you can sign up with the same ID for one month.
+Limited.\nEven if you cancel your membership, the record you have already voted for
+will be maintained.</string>
+
+<string name="go_back">Cancel</string>
+<string name="btn_ok">OK</string>
+</resources>

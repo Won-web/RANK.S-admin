@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/com_tnk_common_35dp"
+        android:background="@color/com_tnk_popup_ppi_ad_list_background_color"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/com_tnk_popup_ppi_ad_list_top_bar_background_color"
+            android:padding="@dimen/com_tnk_common_5dp"
+            >
+
+            <TextView
+                android:id="@+id/com_tnk_offerwall_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/com_tnk_offerwall_title_text_size"
+                />
+
+            <Button
+                android:id="@+id/com_tnk_close_button"
+                android:layout_width="@dimen/com_tnk_popup_top_bar_close_button_size"
+                android:layout_height="@dimen/com_tnk_popup_top_bar_close_button_size"
+                android:background="@drawable/com_tnk_btn_close_black"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/com_tnk_ad_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

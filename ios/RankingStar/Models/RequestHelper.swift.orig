@@ -1,0 +1,314 @@
+//
+//  RequestHelper.swift
+//  HafoosCRM
+//
+//  Created by etech-9 on 22/11/19.
+//  Copyright © 2019 Tushar S. All rights reserved.
+//
+
+import UIKit
+
+typealias ReqCompletionBlock = (_ resObj : NSObject , _ resCode : Int , _ resMessage : String) ->Void
+
+class RequestHelper: NSObject, ETechAsyncRequestDelegate {
+    
+    private var completionBlock:ReqCompletionBlock = { resObj, resCode, resMessage in }
+    
+    //MARK:- API Response
+    func eTechAsyncRequestDelegate(_ action: String, responseData: Response) {
+        
+        if (responseData.resposeObject as? NSDictionary) == nil {
+            completionBlock("" as NSObject, Constant.ResponseStatus.FAIL, "INTERNAL_SERVER_ERROR".localizedLanguage())
+            return
+        }
+        
+        var dicResponse = responseData.resposeObject as! [String:Any]
+        
+        if (dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE] as? String) == nil {
+            
+            dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE] = ""
+        }
+        
+        if (action == Constant.API.CHARGING_HISTORY_URL) {
+            if (dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int == Constant.ResponseStatus.SUCCESS) {
+                if !(dicResponse[Constant.ResponseParam.RESPONSE_DATA] is NSNull){
+                    
+                    //                    let resData = NSMutableDictionary(dictionary: dicResponse as! NSDictionary)
+                    //                    Util.setDefaultValue(data: resData, key: Constant.UserDefaultKey.USER_LOGIN_DATA)
+                }
+            }
+            completionBlock(responseData as NSObject, dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int, dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE]! as! String)
+        }else if (action == Constant.API.GET_CONTEST_BANNERI_LIST_URL) {
+            var objContestDetail = ContestDetail()
+            
+            if (dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int == Constant.ResponseStatus.SUCCESS) {
+                let dic = (dicResponse[Constant.ResponseParam.RESPONSE_DATA] as! NSDictionary)
+                objContestDetail = ContestDetail.dictToUserObjectConvertionContest(dictData: dic)
+            }
+            completionBlock(objContestDetail as NSObject, dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int, dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE]! as! String)
+        }else if (action == Constant.API.GET_SUB_CONTEST_LIST_URL) {
+            var objContestDetail = ContestDetail()
+            
+            if (dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int == Constant.ResponseStatus.SUCCESS) {
+                let dic = dicResponse[Constant.ResponseParam.RESPONSE_DATA] as! NSDictionary
+                
+                objContestDetail = ContestDetail.dictToUserObjectConvertionSubContest(dictData: dic)
+                
+                if let objRefData = dic["has_more_page"] as? Bool {
+                    objContestDetail.hasMoreRecored = objRefData
+                }
+                
+            }
+            completionBlock(objContestDetail as NSObject, dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int, dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE]! as! String)
+        }else if (action == Constant.API.GET_SEARCH_LIST_URL) {
+            var objUserProfileModel = UserProfileModel()
+            
+            if (dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int == Constant.ResponseStatus.SUCCESS) {
+                let dic = dicResponse[Constant.ResponseParam.RESPONSE_DATA] as! NSDictionary
+                
+                objUserProfileModel = UserProfileModel.dictToUserObjectConvertionSearch(dictData: dic)
+                //contestant_list
+                objUserProfileModel.hasMoreRecored = false
+                if let objRefData = dic["has_more_page"] as? Bool {
+                    objUserProfileModel.hasMoreRecored = objRefData
+                }
+                
+            }
+            completionBlock(objUserProfileModel as NSObject, dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int, dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE]! as! String)
+        }else if (action == Constant.API.LOGIN_URL) {
+            var objUserProfileModel = UserProfileModel()
+            
+            if (dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int == Constant.ResponseStatus.SUCCESS) {
+                let dic = dicResponse[Constant.ResponseParam.RESPONSE_DATA] as! NSDictionary
+                
+                objUserProfileModel = UserProfileModel.dictToUserObjectConvertionLogin(dictData: dic)
+            }
+            completionBlock(objUserProfileModel as NSObject, dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int, dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE]! as! String)
+        }else if (action == Constant.API.SOCIAL_LOGIN_URL) {
+            var objUserProfileModel = UserProfileModel()
+            
+            if (dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int == Constant.ResponseStatus.SUCCESS) {
+                let dic = dicResponse[Constant.ResponseParam.RESPONSE_DATA] as! NSDictionary
+                
+                objUserProfileModel = UserProfileModel.dictToUserObjectConvertionLogin(dictData: dic)
+            }
+            completionBlock(objUserProfileModel as NSObject, dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int, dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE]! as! String)
+        }
+<<<<<<< HEAD
+        
+        
+        
+=======
+        else if (action == Constant.API.NOTICE_LIST) {
+            let objNoticeModel = Notice()
+            
+            if (dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int == Constant.ResponseStatus.SUCCESS) {
+//                let dic = dicResponse[Constant.ResponseParam.RESPONSE_DATA] as! NSDictionary
+                
+//                objNoticeModel = Notice.dictToUserObjectConvertionSearch(dictData: dic)
+                
+//                objUserProfileModel.hasMoreRecored = false
+//                if let objRefData = dic["has_more_page"] as? Bool {
+//                    objUserProfileModel.hasMoreRecored = objRefData
+//                }
+                
+            }
+            completionBlock(objNoticeModel as NSObject, dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int, dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE]! as! String)
+        }
+        else if (action == Constant.API.PUSH_NOTIFICATION_LIST) {
+            let objPushNotificationeModel = PushNotification()
+            
+            if (dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int == Constant.ResponseStatus.SUCCESS) {
+//                let dic = dicResponse[Constant.ResponseParam.RESPONSE_DATA] as! NSDictionary
+//
+//                objNoticeModel = Notice.dictToUserObjectConvertionSearch(dictData: dic)
+//
+//                objUserProfileModel.hasMoreRecored = false
+//                if let objRefData = dic["has_more_page"] as? Bool {
+//                    objUserProfileModel.hasMoreRecored = objRefData
+//                }
+                
+            }
+            completionBlock(objPushNotificationeModel as NSObject, dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int, dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE]! as! String)
+        }
+        else if (action == Constant.API.GET_SETTINGS) {
+            let objSettingsModel = Settings()
+            
+            if (dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int == Constant.ResponseStatus.SUCCESS) {
+//                let dic = dicResponse[Constant.ResponseParam.RESPONSE_DATA] as! NSDictionary
+//
+//                objNoticeModel = Notice.dictToUserObjectConvertionSearch(dictData: dic)
+//
+//                objUserProfileModel.hasMoreRecored = false
+//                if let objRefData = dic["has_more_page"] as? Bool {
+//                    objUserProfileModel.hasMoreRecored = objRefData
+//                }
+                
+            }
+            completionBlock(objSettingsModel as NSObject, dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int, dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE]! as! String)
+        }
+        else if (action == Constant.API.SET_SETTINGS) {
+            let objSettingsModel = Settings()
+            
+            if (dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int == Constant.ResponseStatus.SUCCESS) {
+//                let dic = dicResponse[Constant.ResponseParam.RESPONSE_DATA] as! NSDictionary
+//
+//                objNoticeModel = Notice.dictToUserObjectConvertionSearch(dictData: dic)
+//
+//                objUserProfileModel.hasMoreRecored = false
+//                if let objRefData = dic["has_more_page"] as? Bool {
+//                    objUserProfileModel.hasMoreRecored = objRefData
+//                }
+                
+            }
+            completionBlock(objSettingsModel as NSObject, dicResponse[Constant.ResponseParam.RESPONSE_FLAG] as! Int, dicResponse[Constant.ResponseParam.RESPONSE_MESSAGE]! as! String)
+        }
+>>>>>>> 6aa397a2731d61c7445dea6ca03e66f01a91001a
+    }
+    
+    //MARK:- API Request Call
+    func chargingHistoryAPI(objUser:UserProfileModel, resBlock:  @escaping ReqCompletionBlock) {
+        
+        completionBlock = resBlock
+        
+        let request = Request()
+        request.setDefaultParameter()
+        
+        //        request.dictParamValues["email"] = objUser.strEmail
+        //        request.dictParamValues["password"] = objUser.strPwd
+        
+        let asyncRequest = ETechAsyncRequest()
+        asyncRequest.delegate = self
+        asyncRequest.sendPostRequest(Constant.API.CHARGING_HISTORY_URL, requestData: request)
+    }
+    
+    func loginWithEmailAPI(objUser:UserProfileModel, resBlock:  @escaping ReqCompletionBlock) {
+        
+        completionBlock = resBlock
+        
+        let request = Request()
+        request.setDefaultParameter()
+        
+        request.dictParamValues["email"] = objUser.strEmail
+        request.dictParamValues["password"] = objUser.strPwd
+        request.dictParamValues["auto_login"] = String(objUser.isAutoLogin)
+        request.dictParamValues["login_type"] = objUser.strLoginType
+        
+        let asyncRequest = ETechAsyncRequest()
+        asyncRequest.delegate = self
+        asyncRequest.sendPostRequest(Constant.API.LOGIN_URL, requestData: request)
+    }
+    
+    func socialLoginAPI(objUser:UserProfileModel, resBlock:  @escaping ReqCompletionBlock) {
+        
+        completionBlock = resBlock
+        
+        let request = Request()
+        request.setDefaultParameter()
+        
+        request.dictParamValues["social_id"] = objUser.strUserId
+        request.dictParamValues["name"] = objUser.strUserName
+        request.dictParamValues["nick_name"] = objUser.strUserNikName
+        request.dictParamValues["email"] = objUser.strEmail
+        request.dictParamValues["login_type"] = objUser.strLoginType
+        
+        let asyncRequest = ETechAsyncRequest()
+        asyncRequest.delegate = self
+        asyncRequest.sendPostRequest(Constant.API.SOCIAL_LOGIN_URL, requestData: request)
+    }
+    
+    
+    func contentListAPI(objUser:UserProfileModel, resBlock:  @escaping ReqCompletionBlock) {
+        
+        completionBlock = resBlock
+        
+        let request = Request()
+        request.setDefaultParameter()
+        
+        let asyncRequest = ETechAsyncRequest()
+        asyncRequest.delegate = self
+        asyncRequest.sendPostRequest(Constant.API.GET_CONTEST_BANNERI_LIST_URL, requestData: request)
+    }
+    
+    func subContentListAPI(objUser:UserProfileModel, resBlock:  @escaping ReqCompletionBlock) {
+        
+        completionBlock = resBlock
+        
+        let request = Request()
+        request.setDefaultParameter()
+        request.dictParamValues["page"] = objUser.strPage
+        
+        let asyncRequest = ETechAsyncRequest()
+        asyncRequest.delegate = self
+        asyncRequest.sendPostRequest(Constant.API.GET_SUB_CONTEST_LIST_URL, requestData: request)
+    }
+    
+    func getSearchListAPI(objUser:UserProfileModel, resBlock:  @escaping ReqCompletionBlock) {
+        
+        completionBlock = resBlock
+        
+        let request = Request()
+        request.setDefaultParameter()
+        request.dictParamValues["searchTerm"] = objUser.strSearch
+        request.dictParamValues["page"] = objUser.strPage
+        
+        let asyncRequest = ETechAsyncRequest()
+        asyncRequest.delegate = self
+        asyncRequest.sendPostRequest(Constant.API.GET_SEARCH_LIST_URL, requestData: request)
+    }
+<<<<<<< HEAD
+    
+=======
+    func getNoticeListAPI(resBlock:  @escaping ReqCompletionBlock) {
+        
+        completionBlock = resBlock
+        
+        let request = Request()
+        request.setDefaultParameter()
+        
+        let asyncRequest = ETechAsyncRequest()
+        asyncRequest.delegate = self
+        asyncRequest.sendPostRequest(Constant.API.NOTICE_LIST, requestData: request)
+    }
+    func getPushNotificationListAPI(userID : String, resBlock:  @escaping ReqCompletionBlock) {
+        
+        completionBlock = resBlock
+        
+        let request = Request()
+        request.setDefaultParameter()
+        request.dictParamValues["user_id"] = userID
+        
+        let asyncRequest = ETechAsyncRequest()
+        asyncRequest.delegate = self
+        asyncRequest.sendPostRequest(Constant.API.PUSH_NOTIFICATION_LIST, requestData: request)
+    }
+    func getSettingsAPI(objSettings : Settings, resBlock:  @escaping ReqCompletionBlock) {
+        
+        completionBlock = resBlock
+        
+        let request = Request()
+        request.setDefaultParameter()
+        request.dictParamValues["user_id"] = objSettings.userId
+        
+        let asyncRequest = ETechAsyncRequest()
+        asyncRequest.delegate = self
+        asyncRequest.sendPostRequest(Constant.API.GET_SETTINGS, requestData: request)
+    }
+    func setSettingsAPI(objSettings : Settings, resBlock:  @escaping ReqCompletionBlock) {
+        
+        completionBlock = resBlock
+        
+        let request = Request()
+        request.setDefaultParameter()
+        request.dictParamValues["user_id"] = objSettings.userId
+        request.dictParamValues["push_alert"] = objSettings.pushalert
+        request.dictParamValues["push_sound"] = objSettings.pushsound
+        request.dictParamValues["push_vibrate"] = objSettings.pushvibrate
+        
+        let asyncRequest = ETechAsyncRequest()
+        asyncRequest.delegate = self
+        asyncRequest.sendPostRequest(Constant.API.SET_SETTINGS, requestData: request)
+    }
+>>>>>>> 6aa397a2731d61c7445dea6ca03e66f01a91001a
+}
+

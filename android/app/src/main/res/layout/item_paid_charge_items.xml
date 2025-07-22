@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvlblStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/nanumbarun_gothic_bold"
+            android:text="@string/str_lbl_ranking_star"
+            android:textColor="@color/colorAccent"
+            android:layout_marginStart="@dimen/app_margin"
+            android:textSize="16sp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStars"
+            android:layout_width="@dimen/_55sdp"
+            android:gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/tvlblStars"
+            android:fontFamily="@font/nanumbarun_gothic_bold"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+
+            tools:text="2,000개" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPurchaseAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_gradient_withoutborder_dark_light"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/white"
+            tools:text="rs 1,00000" />
+    </RelativeLayout>
+</layout>

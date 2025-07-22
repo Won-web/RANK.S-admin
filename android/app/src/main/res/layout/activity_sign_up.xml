@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.ui.signin.SignUpActivity">
+
+        <include
+            android:id="@+id/layoutTool"
+            layout="@layout/layout_toolbar_back_charge" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutTool">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/str_lbl_email_id"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:fontFamily="@font/nanumbarun_gothic" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginBottom="5dp">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etSignupEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/edittext_rect"
+                                    android:fontFamily="@font/nanumbarun_gothic_light"
+                                    android:hint="@string/str_hint_your_email_address"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textEmailAddress"
+                                    android:lines="1"
+                                    android:maxLines="1"
+                                    android:padding="10dp"
+                                    android:textSize="12sp" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnDoublecheck"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/btn_check"
+                                    android:fontFamily="@font/nanumbarun_gothic_bold"
+                                    android:padding="5dp"
+                                    android:text="@string/btn_str_double_check"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/grey"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvIsEmailAvailOrUsed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/fbtxt"
+                                android:textSize="12sp"
+                                app:fontFamily="@font/nanumbarun_gothic_light" />
+                        <LinearLayout
+                            android:id="@+id/llemail_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/str_lbl_password"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:fontFamily="@font/nanumbarun_gothic" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etSignupPwd"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/edittext_rect"
+                                android:fontFamily="@font/nanumbarun_gothic_light"
+                                android:hint="@string/str_hint_password"
+                                android:imeOptions="actionNext"
+                                android:inputType="textPassword"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:padding="10dp"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etSignupRepwd"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/edittext_rect"
+                                android:fontFamily="@font/nanumbarun_gothic_light"
+                                android:hint="@string/str_hint_re_password"
+                                android:imeOptions="actionNext"
+                                android:inputType="textPassword"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:padding="10dp"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/str_lbl_name"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etSignupname"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edittext_rect"
+                            android:fontFamily="@font/nanumbarun_gothic_light"
+                            android:hint="@string/str_hint_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textSize="12sp"
+                            app:fontFamily="@font/nanumbarun_gothic" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/str_lbl_phoneNumber"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/nanumbarun_gothic" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etSignupPh"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edittext_rect"
+                            android:fontFamily="@font/nanumbarun_gothic_light"
+                            android:hint="@string/str_hint_mobile_phone_number"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxEms="11"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textSize="12sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/str_lbl_nickname"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etSignupNickname"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edittext_rect"
+                            android:fontFamily="@font/nanumbarun_gothic_light"
+                            android:hint="@string/str_hint_enter_nickname"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textSize="12sp"
+                            app:fontFamily="@font/nanumbarun_gothic" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFBLoggedintxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:drawableLeft="@drawable/ic_facebook"
+                            android:drawablePadding="10dp"
+                            android:drawableTint="@color/fbtxt"
+                            android:gravity="center_vertical"
+                            android:text="@string/str_lbl_loggedin_fb"
+                            android:textColor="@color/fbtxt"
+                            android:textSize="12sp"
+                            android:visibility="gone"
+                            app:fontFamily="@font/nanumbarun_gothic_light"
+                            tools:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvGoogleLoggedintxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:drawableStart="@drawable/ic_google"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/str_lbl_loggedin_google"
+                            android:textColor="@color/googletxt"
+                            android:textSize="12sp"
+                            android:visibility="gone"
+                            app:fontFamily="@font/nanumbarun_gothic_light"
+
+                            tools:visibility="visible" />
+
+                        <LinearLayout
+                            android:id="@+id/tvKakaoLoggedintxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="@dimen/app_margin_min"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/ic_share_kakao" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/_4sdp"
+                                android:text="@string/str_lbl_loggedin_kako"
+                                android:textSize="12sp"
+                                app:fontFamily="@font/nanumbarun_gothic_light" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLoggedintxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:drawableStart="@drawable/ic_naver_edit"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/str_lbl_loggedin_naver"
+                            android:textSize="12sp"
+                            android:visibility="gone"
+                            app:fontFamily="@font/nanumbarun_gothic_light"
+                            tools:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/str_lbl_agreement"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/nanumbarun_gothic" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatCheckBox
+                                android:id="@+id/cbTermsConditions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/terms_and_conditions"
+                                android:textSize="14sp"
+                                app:fontFamily="@font/nanumbarun_gothic" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTermsLink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/str_signup_view"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatCheckBox
+                                android:id="@+id/cbTermsConditionsPrivacy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:checked="false"
+                                android:text="@string/lbl_privacy_policy"
+                                android:textSize="14sp"
+                                app:fontFamily="@font/nanumbarun_gothic" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPrivacyLink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/str_signup_view"
+
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+                        <!--                        <androidx.appcompat.widget.AppCompatCheckBox-->
+                        <!--                            android:id="@+id/cbTermsConditionssubscribe"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginBottom="10dp"-->
+                        <!--                            android:text="@string/subscribe_to_newsletter_subscription"-->
+                        <!--                            android:textSize="12sp"-->
+                        <!--                            app:fontFamily="@font/nanumbarun_gothic" />-->
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSignin"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true"
+                        android:fontFamily="@font/nanumbarun_gothic_bold"
+                        android:text="@string/btn_str_registration_completed"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:theme="@style/BtnTheme1" />
+                </LinearLayout>
+
+
+            </ScrollView>
+        </RelativeLayout>
+
+
+        <include
+            android:id="@+id/extraViews"
+            layout="@layout/layout_extra_views"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutTool"
+            android:layout_alignParentBottom="true"
+            tools:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</layout>

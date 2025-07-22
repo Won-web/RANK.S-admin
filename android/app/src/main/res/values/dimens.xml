@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="vote_btn_size">@dimen/_70sdp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="text_regular">@dimen/_14ssp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">@dimen/_200sdp</dimen>
+    <dimen name="design_navigation_icon_size" tools:override="true">20dp</dimen>
+    <dimen name="app_margin_min">@dimen/_4sdp</dimen>
+    <dimen name="app_margin">@dimen/_8sdp</dimen>
+    <dimen name="app_margin_max">@dimen/_12sdp</dimen>
+    <dimen name="app_padding_min">@dimen/_4sdp</dimen>
+    <dimen name="app_padding">@dimen/_8sdp</dimen>
+    <dimen name="app_padding_max">@dimen/_12sdp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+</resources>

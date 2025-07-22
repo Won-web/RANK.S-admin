@@ -1,0 +1,127 @@
+//
+//  LoginViewModel.swift
+//  RankingStar
+//
+//  Created by Jinesh on 03/02/20.
+//  Copyright © 2020 Etech. All rights reserved.
+//
+
+import UIKit
+
+class LoginViewModel: NSObject {
+    
+    private var vcRef : LoginVC!
+    
+    var arrContestantDetailModel:[ContestantDetailModel] = []
+    
+    private convenience override init() {
+        self.init(vc:nil)
+    }
+    
+    init(vc : LoginVC!) {
+        super.init()
+        vcRef = vc
+    }
+    
+    
+    func getTableNumberOfSection() -> Int {
+        return arrContestantDetailModel.count
+    }
+    
+<<<<<<< HEAD
+    
+    
+    
+    
+    func loginWithEmailAPI(objUser : UserProfileModel) {
+        let requestHelper = RequestHelper()
+        
+        requestHelper.loginWithEmailAPI(objUser: objUser, resBlock: { (_ resObj : NSObject ,_ resCode : Int,_ resMessage : String) -> Void in
+            
+            self.vcRef.onApiSuccessHideProgress()
+            if resCode == Constant.ResponseStatus.SUCCESS {
+                
+                self.vcRef.loginSuccessWithAuth()
+            }
+            else{
+                self.vcRef.showMessage(message: resMessage)
+            }
+        })
+    }
+    
+    func socialLoginAPI(objUser : UserProfileModel) {
+        let requestHelper = RequestHelper()
+        requestHelper.socialLoginAPI(objUser: objUser, resBlock: { (_ resObj : NSObject ,_ resCode : Int,_ resMessage : String) -> Void in
+            
+            self.vcRef.onApiSuccessHideProgress()
+            if resCode == Constant.ResponseStatus.SUCCESS {
+                
+                self.vcRef.loginSuccessWithSocialAccount()
+            }
+            else{
+                self.vcRef.showMessage(message: resMessage)
+            }
+        })
+    }
+    
+    func setDefaulstData()
+    {
+        arrContestantDetailModel.removeAll()
+        let objContestantDetailModel = ContestantDetailModel()
+        objContestantDetailModel.strName = "Seyeon Kim"
+        objContestantDetailModel.strUserProfileImgUrl = "people1"
+        objContestantDetailModel.strVoteCoin = 15200
+        //  objContestantDetailModel.strStatus = "Voting"
+        
+=======
+    func setDefaulstData()
+    {
+        arrContestantDetailModel.removeAll()
+        let objContestantDetailModel = ContestantDetailModel()
+        objContestantDetailModel.strName = "Seyeon Kim"
+        objContestantDetailModel.strUserProfileImgUrl = "people1"
+        objContestantDetailModel.strVoteCoin = 15200
+        //  objContestantDetailModel.strStatus = "Voting"
+        
+>>>>>>> 6aa397a2731d61c7445dea6ca03e66f01a91001a
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        arrContestantDetailModel.append(objContestantDetailModel)
+        
+        
+    }
+<<<<<<< HEAD
+=======
+    
+    
+    
+    func loginWithEmailAPI(objUser : UserProfileModel) {
+        let requestHelper = RequestHelper()
+        
+        requestHelper.loginWithEmailAPI(objUser: objUser, resBlock: { (_ resObj : NSObject ,_ resCode : Int,_ resMessage : String) -> Void in
+            
+            self.vcRef.onApiSuccessHideProgress()
+            if resCode == Constant.ResponseStatus.SUCCESS {
+                
+                self.vcRef.loginSuccessWithAuth()
+                //                arrChargingHistoryModel = resObj as! arrChargingHistoryModel
+                
+            }
+            else{
+                self.vcRef.showMessage(message: resMessage)
+            }
+        })
+    }
+>>>>>>> 6aa397a2731d61c7445dea6ca03e66f01a91001a
+}

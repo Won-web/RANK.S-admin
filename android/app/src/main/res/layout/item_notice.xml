@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@id/tvGotoNotice"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoticeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Notice1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:fontFamily="@font/nanumbarun_gothic" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoticeTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                tools:text="2020.01.01"
+                android:textSize="14sp"
+                app:fontFamily="@font/nanumbarun_gothic" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tvGotoNotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_go_to_arrow"
+            android:backgroundTint="@color/grey" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff5488</color>
+    <color name="colorPrimaryDark">#F04689</color>
+    <color name="colorAccent">#F04689</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#404553</color>
+    <color name="tab2">#296DF2</color>
+    <color name="tab1">#F0F0F0</color>
+    <color name="grey">#8f8f8f</color>
+    <color name="lightgrey">#908f8f8f</color>
+    <color name="status_lightgrey">#adb3bc</color>
+    <color name="darkgrey">#404453</color>
+    <color name="statusbargrey">#80000000</color>
+    <color name="textColorAccent">#F05088</color>
+    <color name="transColorAccent">#90F05088</color>
+    <color name="colorlight">#f0f0f0</color>
+
+    <color name="fbtxt">#296df2</color>
+    <color name="googletxt">#f14336</color>
+    <color name="semi_transparent">#40000000</color>
+    <color name="text_color_light_grey_blue">#adb3bc</color>
+    <color name="text_color_white">@color/white</color>
+    <color name="black_two">#191919</color>
+    <color name="gunmatel">#50555c</color>
+    <color name="gift_profile_border">#f0e4e8</color>
+
+    <color name="app_bg">@color/white</color>
+    <color name="image_bg">#D5D5D5</color>
+    <color name="circularimage_border">#f0e4e8</color>
+    <color name="bg_black">#000</color>
+    <color name="status_bar_color">#999</color>
+    <color name="divider_color">#f0f0f0</color>
+
+
+</resources>

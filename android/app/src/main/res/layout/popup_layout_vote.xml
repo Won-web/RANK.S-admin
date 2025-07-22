@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/votebar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="top"
+                android:background="@color/colorAccent"
+                android:drawableTint="#ffffff"
+                android:fontFamily="@font/nanumbarun_gothic_bold"
+                android:gravity="center"
+                android:text="@string/str_btn_vote"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivclose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/ic_close" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableRight="@drawable/ic_star"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/nanumbarun_gothic"
+                android:gravity="center"
+                android:text="@string/str_lbl_my_stars"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvpopupStarsAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/title"
+                android:fontFamily="@font/nanumbarun_gothic"
+                android:gravity="center"
+                android:text="@string/str_lbl_my_stars"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                tools:text="100" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvpopupStarsAmt"
+                android:fontFamily="@font/nanumbarun_gothic"
+                android:text="@string/str_lbl_100_stars"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etvote"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_round"
+            android:ellipsize="start"
+            android:fontFamily="@font/nanumbarun_gothic"
+            android:gravity="center"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:visibility="visible" />
+        <!--     android:hint="@string/str_popup_vote_star"-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnUseAll"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_nav_white_border_rounded"
+            android:backgroundTint="@color/lightgrey"
+            android:fontFamily="@font/nanumbarun_gothic"
+            android:gravity="center"
+            android:text="@string/str_btn_useAll"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/nanumbarun_gothic"
+            android:gravity="center"
+            android:text="@string/str_star_pop_warning"
+            android:textColor="@color/grey"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:fontFamily="@font/nanumbarun_gothic_bold"
+            android:text="@string/str_btn_vote_popup"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

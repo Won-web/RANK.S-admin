@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:background="@color/colorAccent"
+                    android:drawableTint="#ffffff"
+                    android:fontFamily="@font/nanumbarun_gothic_bold"
+                    android:gravity="center"
+                    android:text="@string/str_lbl_gift"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivclose"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/ic_close" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableRight="@drawable/ic_star"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/nanumbarun_gothic"
+                    android:gravity="center"
+                    android:text="@string/str_lbl_my_stars"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvpopupStarsAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/title"
+                    android:fontFamily="@font/nanumbarun_gothic"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    tools:text="100" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tvpopupStarsAmt"
+                    android:fontFamily="@font/nanumbarun_gothic"
+                    android:gravity="center_vertical"
+                    android:text="@string/str_lbl_100_stars"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/giftwarn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/nanumbarun_gothic"
+                android:gravity="center"
+                android:text="@string/str_lbl_gift_star_warning"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_round">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/mobileProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/profile"
+                    app:civ_border="true"
+                    app:civ_border_color="@color/circularimage_border"
+                    app:civ_border_width="2dp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/giftMobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/nanumbarun_gothic"
+                    android:hint="@string/str_gift_mob_no"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxEms="11"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:padding="10dp"
+
+                    android:textColorHint="@color/grey"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/nanumbarun_gothic_light" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_round">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/star"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_star"
+                    app:civ_border="true"
+                    app:civ_border_color="@color/gift_profile_border"
+                    app:civ_border_width="2dp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/giftVotesAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/nanumbarun_gothic"
+                    android:hint="@string/str_gift_stars"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColorHint="@color/grey"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/nanumbarun_gothic_light" />
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/giftbtnUseAll"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_nav_white_border_rounded"
+                android:backgroundTint="@color/lightgrey"
+                android:fontFamily="@font/nanumbarun_gothic"
+                android:gravity="center"
+                android:text="@string/str_btn_useAll"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/giftHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/nanumbarun_gothic"
+                android:gravity="center"
+                android:text="@string/str_lbl_gift_popup"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/giftto_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/nanumbarun_gothic"
+                android:gravity="center"
+
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/giftWarining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/nanumbarun_gothic"
+                android:gravity="center"
+                android:text="@string/str_hint_git_cant_cancel"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/nanumbarun_gothic_bold"
+                android:text="@string/btn_str_gift"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:background="@color/white"-->
+    <!--    android:orientation="vertical">-->
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="30dp"-->
+    <!--        android:layout_marginBottom="20dp"-->
+    <!--        android:gravity="center">-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:id="@+id/title"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:drawableRight="@drawable/ic_star"-->
+    <!--            android:fontFamily="@font/nanumbarun_gothic"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="@string/str_lbl_my_stars"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="@dimen/_14ssp" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+
+    <!--            android:layout_toRightOf="@id/title"-->
+    <!--            android:fontFamily="@font/nanumbarun_gothic"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="@string/str_lbl_100_stars"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="@dimen/_14ssp" />-->
+    <!--    </RelativeLayout>-->
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginRight="20dp"-->
+    <!--        android:background="@drawable/btn_round">-->
+
+    <!--        <com.mikhaellopez.circularimageview.CircularImageView-->
+    <!--            android:id="@+id/mobileProfile"-->
+    <!--            android:layout_width="40dp"-->
+    <!--            android:layout_height="40dp"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_gravity="center_vertical"-->
+    <!--            android:layout_marginLeft="5dp"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:src="@drawable/profimg"-->
+    <!--            app:civ_border="true"-->
+    <!--            app:civ_border_color="@color/grey"-->
+    <!--            app:civ_border_width="2dp" />-->
+
+
+    <!--        &lt;!&ndash;            <androidx.appcompat.widget.AppCompatEditText&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:id="@+id/giftMobileNo"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                &ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:fontFamily="@font/nanumbarun_gothic"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:gravity="center"&ndash;&gt;-->
+    <!--        &lt;!&ndash;               &ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:hint="Enter Phone Number"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:inputType="phone"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:textSize="14sp" />&ndash;&gt;-->
+    <!--        <androidx.appcompat.widget.AppCompatEditText-->
+    <!--            android:id="@+id/giftMobileNo"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="50dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:layout_marginRight="10dp"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:background="@color/white"-->
+    <!--            android:fontFamily="@font/nanumbarun_gothic_light"-->
+    <!--            android:hint="@string/str_hint_phone_number"-->
+    <!--            android:imeOptions="actionNext"-->
+    <!--            android:lines="1"-->
+    <!--            android:maxLines="1"-->
+    <!--            android:padding="10dp"-->
+    <!--            android:textAlignment="center"-->
+    <!--            android:textColorHint="@color/colorAccent"-->
+    <!--            android:textSize="14sp"-->
+    <!--            app:fontFamily="@font/nanumbarun_gothic_light" />-->
+
+    <!--    </RelativeLayout>-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:text="User name will be here"-->
+    <!--        android:textSize="12sp" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatEditText-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginRight="20dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:background="@drawable/btn_round"-->
+    <!--        android:fontFamily="@font/nanumbarun_gothic_light"-->
+    <!--        android:hint="@string/btn_str_enter_points_to_gift"-->
+    <!--        android:imeOptions="actionNext"-->
+    <!--        android:lines="1"-->
+    <!--        android:maxLines="1"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textColorHint="@color/colorAccent"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:fontFamily="@font/nanumbarun_gothic_light" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginLeft="30dp"-->
+    <!--        android:layout_marginRight="30dp"-->
+    <!--        android:layout_marginBottom="20dp"-->
+    <!--        android:background="@drawable/btn_filled_login"-->
+    <!--        android:fontFamily="@font/nanumbarun_gothic"-->
+    <!--        android:gravity="center"-->
+    <!--        android:hint="@string/str_btn_useAll"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textColorHint="@color/white"-->
+    <!--        android:textSize="16sp" />-->
+
+    <!--</LinearLayout>-->
+

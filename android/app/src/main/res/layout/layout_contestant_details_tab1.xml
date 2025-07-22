@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScroll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_above="@id/bottombar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/bottombar"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivContestantMainProfile"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="1:1.05"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/btnEditProfile"
+                                android:layout_width="100dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/btn_round"
+                                android:fontFamily="@font/nanumbarun_gothic"
+                                android:gravity="center"
+                                android:text="@string/str_btn_edit_profile"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12sp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="#ffebf1">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvContestantCurrRank"
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/half_circle"
+                                android:fontFamily="@font/sf_pro_rounded_heavy"
+                                android:gravity="center"
+                                android:paddingStart="10dp"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                tools:text="1st" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvContestantVotes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawableLeft="@drawable/ic_star"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/sf_pro_rounded_heavy"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="20sp"
+                                tools:text="15,200" />
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/lldatas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/ContestantName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:fontFamily="@font/nanumbarun_gothic_bold"
+                                tools:text="name" />
+
+                            <LinearLayout
+                                android:id="@+id/lldata"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:divider="?android:dividerHorizontal"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/str_lbl_age"
+                                        app:fontFamily="@font/nanumbarun_gothic" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvContestantAge"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/app_margin_min"
+                                        android:textColor="@color/black"
+                                        app:fontFamily="@font/nanumbarun_gothic_bold"
+                                        tools:text="25years" />
+
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="1dip"
+                                    android:layout_height="match_parent"
+                                    android:background="#707070" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/str_lbl_height"
+                                        app:fontFamily="@font/nanumbarun_gothic" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvContestantHeight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/app_margin_min"
+                                        android:textColor="@color/black"
+                                        app:fontFamily="@font/nanumbarun_gothic_bold"
+                                        tools:text="172cm" />
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="1dip"
+                                    android:layout_height="match_parent"
+                                    android:background="#707070" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="20dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/str_lbl_weight"
+                                        app:fontFamily="@font/nanumbarun_gothic" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvContestantWeight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/app_margin_min"
+                                        android:textColor="@color/black"
+                                        app:fontFamily="@font/nanumbarun_gothic_bold"
+                                        tools:text="50kg" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/headerVote"
+                                    android:layout_width="150dp"
+                                    android:layout_height="35dp"
+                                    android:background="@drawable/btn_gradient_light_dark"
+                                    android:fontFamily="@font/nanumbarun_gothic_bold"
+                                    android:text="@string/str_btn_vote"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/headershare"
+                                    android:layout_width="100dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/bg_btn_share"
+
+                                    android:fontFamily="@font/nanumbarun_gothic_bold"
+                                    android:text="@string/str_btn_share"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/lvOtherDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/app_bg"
+                            android:paddingStart="20dp" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="#ffeef4"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/msgcontestantimg"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="@dimen/app_margin_min"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+
+                                app:civ_border="true"
+
+                                app:civ_border_color="@color/grey"
+                                app:civ_border_width="2dp" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/msg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/msgcontestantimg"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/nanumbarun_gothic"
+                                android:gravity="start|center"
+                                android:layout_marginTop="@dimen/app_margin_min"
+                                android:layout_marginBottom="@dimen/app_margin_min"
+                                android:textColor="@color/black"
+                                tools:text="sbc\nabc" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvprofileVdList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:background="@color/white"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="20dp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvImages"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imgLarger"
+                                android:layout_width="match_parent"
+                                android:layout_height="350dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvYoutubeVideo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@color/white"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:id="@+id/bottombar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/tvprofVote"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:drawableTop="@drawable/ic_votehistory"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="13dp"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_vote" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/nanumbarun_gothic"
+                        android:paddingTop="5dp"
+                        android:text="@string/str_btn_vote"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:layout_marginBottom="@dimen/app_margin"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/tvprofCharge"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:drawableTop="@drawable/ic_votehistory"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_add_white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/nanumbarun_gothic"
+                        android:paddingTop="5dp"
+                        android:text="@string/str_lbl_charge"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:layout_marginBottom="@dimen/app_margin"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/tvprofGift"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:drawableTop="@drawable/ic_votehistory"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_gift_bottom" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/nanumbarun_gothic"
+                        android:paddingTop="5dp"
+                        android:text="@string/str_lbl_gift"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:layout_marginBottom="@dimen/app_margin"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/tvprofHistroy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:drawableTop="@drawable/ic_votehistory"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_votehistory" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/nanumbarun_gothic"
+                        android:paddingTop="5dp"
+                        android:text="@string/str_lbl_history"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+</layout>
