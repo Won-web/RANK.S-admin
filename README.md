@@ -27,4 +27,4 @@ Frontend: Android (Java/Kotlin), iOS (Swift)
 모바일 앱: 네이티브 앱(Android/iOS)
 
 기타:
-기능소개에 화면 캡쳐가 포함되어 있습니다.
+시스템에 대한 각 화면 기능소개는 [기능소개 PPT 파일](docs/랭킹스타_기능소개.pptx)에서 확인할 수 있습니다.
